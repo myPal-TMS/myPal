@@ -15,7 +15,7 @@
 
  Lu, Jackson
 
- Peterson, Lanique
+ @La-Nique, Peterson, Lanique
 
 
 ### Group info (check all that apply - add an X in the [ ])
