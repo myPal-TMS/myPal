@@ -20,7 +20,7 @@
 
 ### Group info (check all that apply - add an X in the [ ])
 - [ ] We are a Daedalus Google Mentorship group
-- [x] We are a beginner group (only completed CSCI 12700)
+- [ ] We are a beginner group (only completed CSCI 12700)
 
 # General Info
 ## Theme: Create a Passion Project - Make something you've always wanted to build!
