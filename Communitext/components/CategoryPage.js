@@ -21,23 +21,31 @@ const CategoryPage = () => {
         }
     }
 
-    return(	    return(
-        <ScrollView>	        <ScrollView>
-            {categories.map((category,index) => (	            {categories.map((category,index) => (
-                    <TouchableOpacity key = {index} onPress={() => alert(category)}>	                <TouchableOpacity
+    return(
+        <ScrollView>
+            {categories.map((category,index) => (
+         <TouchableOpacity
                         key = {index}
-                        onPress={() => alert(category)}>
-                        <Image source = {require('../assets/images/smiley.jpg')}/>	                    <Image source = {require('../assets/images/smiley.jpg')}/>
-                        <Text>	                    <Text>
-                            {category}	                        {category}
-                        </Text>	                    </Text>
-                    </TouchableOpacity>	                </TouchableOpacity>
+                        onPress={() =>
+                            alert(category)}>
+                        <Image source = {require('../assets/images/smiley.jpg')}/>
+                        <Text>
+                            {category}
+                        </Text>
+         </TouchableOpacity>
 
 
-                ))}	            ))}
-            <TextInput value = {Category} placeholder = "Enter new category" onChangeText = {text => setCategory(text)} />
-            <Button title = "Submit" onPress = {() => {addCategory(Category); setCategory("")}}/>
+                   ))}
+            <TextInput
+                value = {Category}
+                placeholder = "Enter new category"
+                onChangeText = {text =>
+                    setCategory(text)} />
+            <Button title = "Submit"
+                    onPress = {() => {addCategory(Category);
+                    setCategory("")}}/>
         </ScrollView>
-            )}
+    )
+        }
 
 export default CategoryPage;
