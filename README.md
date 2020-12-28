@@ -4,6 +4,20 @@
 ### Team name: The major switchers
 ### Team members (format: GitHub username, last name, first name):
 
+
+ aalagna04, Alagna, Andrew
+
+ Neuman, David
+ 
+ Abid , Hannan
+
+ Pavlov, Victoria
+
+ Lu, Jackson
+
+ Peterson, Lanique
+
+
 ### Group info (check all that apply - add an X in the [ ])
 - [ ] We are a Daedalus Google Mentorship group
 - [x] We are a beginner group (only completed CSCI 12700)
