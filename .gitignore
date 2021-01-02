@@ -8,6 +8,7 @@ Communitext/*.key
 Communitext/*.mobileprovision
 Communitext/*.orig.*
 Communitext/web-build/
+.expo/*
 
 # macOS
 .DS_Store
