@@ -6,8 +6,9 @@ import {
     Image,
     ScrollView,
     TextInput,
-    Button
+    Button,
 } from 'react-native';
+import styles from './styles';
 
 
 const CategoryPage = () => {
@@ -22,14 +23,14 @@ const CategoryPage = () => {
     }
 
     return(
-        <ScrollView>
+        <ScrollView style = {styles.container}>
             {categories.map((category,index) => (
          <TouchableOpacity
                         key = {index}
                         onPress={() =>
                             alert(category)}>
                         <Image source = {require('../assets/images/smiley.jpg')}/>
-                        <Text>
+                        <Text style = {styles.text}>
                             {category}
                         </Text>
          </TouchableOpacity>
