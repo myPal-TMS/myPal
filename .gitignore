@@ -1,0 +1,14 @@
+Communitext/node_modules/**/*
+Communitext/.expo/*
+Communitext/npm-debug.*
+Communitext/*.jks
+Communitext/*.p8
+Communitext/*.p12
+Communitext/*.key
+Communitext/*.mobileprovision
+Communitext/*.orig.*
+Communitext/web-build/
+
+# macOS
+.DS_Store
+Communitext/.DS_Store
