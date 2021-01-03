@@ -26,10 +26,13 @@ const CategoryPage = () => {
         <ScrollView style = {styles.container}>
             {categories.map((category,index) => (
          <TouchableOpacity
+                        style = {styles.button}
                         key = {index}
                         onPress={() =>
                             alert(category)}>
-                        <Image source = {require('../assets/images/smiley.jpg')}/>
+                        <Image style = {styles.picture}
+                        
+                        source = {require('../assets/images/Animals/koala.png')}/>
                         <Text style = {styles.text}>
                             {category}
                         </Text>
