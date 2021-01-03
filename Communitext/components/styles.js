@@ -41,9 +41,8 @@ const styles = StyleSheet.create({
     marginTop: 30,
     backgroundColor: '#F4E4D5',
     width: 150,
+    borderRadius: 20,
     
-
-
   },
   picture: {
     flex: 1,

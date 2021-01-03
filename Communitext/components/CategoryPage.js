@@ -32,7 +32,7 @@ const CategoryPage = () => {
                             alert(category)}>
                         <Image style = {styles.picture}
                         
-                        source = {require('../assets/images/Animals/koala.png')}/>
+                        source = {require('../assets/Images/Animals/koala.png')}/>
                         <Text style = {styles.text}>
                             {category}
                         </Text>
