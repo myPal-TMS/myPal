@@ -28,22 +28,15 @@ const styles = StyleSheet.create({
 
   container: {
     //flex: 1,
-    padding: 24,
+    padding: 40,
     backgroundColor: '#CBC2B9',
     //fontFamily: 'Dosis-Bold'
-    
-    
-    
-    
-    
-    
   },
 
   button: {
     flex: 2,
     flexDirection: 'column',
     padding: 10,
-    flexWrap: 'wrap',
     alignItems: 'center',
     marginTop: 30,
     backgroundColor: '#F4E4D5',
