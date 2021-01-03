@@ -1,14 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler'
+
+
 import React from 'react';
-import { StyleSheet, Text, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native'
+
+import { createStackNavigator } from '@react-navigation/stack';
+
 import CategoryPage from './components/CategoryPage';
 import SubCategoryPage from './components/SubCategoryPage';
+
+const Stack = createStackNavigator();
+
+
+
 const App = () => {
   return(
-    <View>
-      <CategoryPage />
-      <SubCategoryPage />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Categories" component={CategoryPage}/>
+        <Stack.Screen name="Subcategory" component={SubCategoryPage}/>
+      </Stack.Navigator>
+    </NavigationContainer>
     
   )
 }

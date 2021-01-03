@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 
-const CategoryPage = () => {
+const CategoryPage = ({navigation}) => {
     const [categories, setCategories] = useState(["category1", "category2", "category3", "category4", "category5", "category6"]);
     const [Category, setCategory] = useState("");
 
@@ -27,7 +27,7 @@ const CategoryPage = () => {
          <TouchableOpacity
                         key = {index}
                         onPress={() =>
-                            alert(category)}>
+                            navigation.navigate('Subcategory', {category: category})}>
                         <Image source = {require('../assets/images/smiley.jpg')}/>
                         <Text>
                             {category}
