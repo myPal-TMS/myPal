@@ -11,7 +11,7 @@ import {
 import styles from './styles';
 
 
-const CategoryPage = () => {
+const CategoryPage = ({navigation}) => {
     const [categories, setCategories] = useState(["category1", "category2", "category3", "category4", "category5", "category6"]);
     const [Category, setCategory] = useState("");
 
@@ -29,11 +29,9 @@ const CategoryPage = () => {
                         style = {styles.button}
                         key = {index}
                         onPress={() =>
-                            alert(category)}>
-                        <Image style = {styles.picture}
-                        
-                        source = {require('../assets/Images/Animals/koala.png')}/>
-                        <Text style = {styles.text}>
+                            navigation.navigate('Subcategory', {category: category})}>
+                        <Image source = {require('../assets/images/smiley.jpg')}/>
+                        <Text>
                             {category}
                         </Text>
          </TouchableOpacity>
