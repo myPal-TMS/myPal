@@ -1,20 +1,20 @@
-import React, {useState} from 'react';
-import {ScrollView, Button, Text, TouchableOpacity, View, TextInput} from 'react-native';
+import React, { useState } from 'react';
+import { ScrollView, Button, Text, TouchableOpacity, View, TextInput } from 'react-native';
 
-const SubCategoryPage = ({navigation, route}) => {
-    const [Food, addFood] = useState (["apple", "banana"])
-    const [IndFood, setIndFood] = useState ("")
+const SubCategoryPage = ({ navigation, route }) => {
+    const [Food, addFood] = useState(["apple", "banana"])
+    const [IndFood, setIndFood] = useState("")
     const testFood = (food) => {
-        if(food != ""){
+        if (food != "") {
             addFood(oldState => [...oldState, food])
             setIndFood("")
         }
-        
+
     }
     return (
         <View>
-            {Food.map((element, index)=>(
-                <TouchableOpacity key = {index} onPress = {() => alert(route.params.category)}>
+            {Food.map((element, index) => (
+                <TouchableOpacity key={index} onPress={() => alert(route.params.category)}>
                     <Text>
                         {element}
                     </Text>
@@ -23,11 +23,11 @@ const SubCategoryPage = ({navigation, route}) => {
             <Text>
                 Test
             </Text>
-            <TextInput value = {IndFood} placeholder = "Enter new subcategory" onChangeText = {text => setIndFood(text)}/>
-            <Button title = "Submit" onPress = {() => {testFood(IndFood)}} />
+            <TextInput value={IndFood} placeholder="Enter new subcategory" onChangeText={text => setIndFood(text)} />
+            <Button title="Submit" onPress={() => { testFood(IndFood) }} />
 
-            
-                
+
+
 
         </View>
     )
