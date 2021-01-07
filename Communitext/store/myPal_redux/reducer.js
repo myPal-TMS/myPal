@@ -2,7 +2,7 @@ import {
     GET_CATEGORIES,
     GET_SUBCATEGORIES,
     GET_SENTENCES,
-    ADD_CATEGORY
+    ADD_CATEGORY, ADD_SUBCATEGORY
 } from '../constants'
 
 let catID = 0;
@@ -11,7 +11,9 @@ let sentID = 0;
 
 const initialCatState = [{ id: 0, title: "cat1" }]
 
-export const addcatReducer = (state = initialCatState, action) => {
+const initialSubCatState = [{ id: 0, name: "subcat1"}]
+
+export const catReducer = (state = initialCatState, action) => {
     switch (action.type) {
         case ADD_CATEGORY:
             return [
@@ -28,3 +30,19 @@ export const addcatReducer = (state = initialCatState, action) => {
     }
 }
 
+export const subCatReducer = (state = initialSubCatState, action) => {
+    switch (action.type){
+        case ADD_SUBCATEGORY:
+            return [
+                ...state,
+                {
+                    id: ++subID,
+                    title: action.title
+                }
+            ]
+         case GET_SUBCATEGORIES:
+            return state
+         default: 
+            return state
+    }
+}

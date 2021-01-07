@@ -1,35 +1,41 @@
 import React, { useState } from 'react';
 import { ScrollView, Button, Text, TouchableOpacity, View, TextInput } from 'react-native';
+import { useDispatch, useSelector } from "react-redux"; 
+import { ADD_SUBCATEGORY } from '../store/constants';
+import { _addSubcategory} from "../store/myPal_redux/actions";
 
 const SubCategoryPage = ({ navigation, route }) => {
-    const [Food, addFood] = useState(["apple", "banana"])
+    const dispatch = useDispatch ()
+    //const [Food, addFood] = useState(["apple", "banana"])
+    const subcategories = useSelector (({subcategories}) => subcategories)
     const [IndFood, setIndFood] = useState("")
-    const testFood = (food) => {
-        if (food != "") {
-            addFood(oldState => [...oldState, food])
+    const testFood = (newFood) => {
+        if (newFood != "") {
+            dispatch (_addSubcategory(newFood))
             setIndFood("")
         }
 
     }
+    console.log(subcategories)
     return (
-        <View>
-            {Food.map((element, index) => (
-                <TouchableOpacity key={index} onPress={() => alert(route.params.category)}>
+        <ScrollView>
+            {subcategories.map((subcategory) => (
+                <TouchableOpacity key={subcategory.id} onPress={() => alert(route.params.category)}>
                     <Text>
-                        {element}
+                        {subcategory.name}
                     </Text>
                 </TouchableOpacity>
             ))}
-            <Text>
+            {/* <Text>
                 Test
-            </Text>
+            </Text> */}
             <TextInput value={IndFood} placeholder="Enter new subcategory" onChangeText={text => setIndFood(text)} />
             <Button title="Submit" onPress={() => { testFood(IndFood) }} />
 
 
 
 
-        </View>
+        </ScrollView>
     )
 }
 export default SubCategoryPage

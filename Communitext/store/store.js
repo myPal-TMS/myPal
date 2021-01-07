@@ -1,8 +1,8 @@
-import { createStore } from 'redux';
-import { addcatReducer } from './myPal_redux/reducer'
-import { _addCategory } from './myPal_redux/actions'
+import { combineReducers, createStore } from 'redux';
+import { catReducer, subCatReducer } from './myPal_redux/reducer'
 
-const store = createStore(addcatReducer);
+const rootReducer = combineReducers ({categories: catReducer, subcategories: subCatReducer})
+const store = createStore(rootReducer);
 
 
 export default store;
