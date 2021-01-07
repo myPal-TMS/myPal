@@ -18,7 +18,6 @@ const CategoryPage = ({ navigation }) => {
   const categories = useSelector(({categories}) => categories);
   const [Category, setCategory] = useState("");
 
-  console.log(categories)
   const addCategory = (newCategory) => {
     if (newCategory != "") {
       dispatch(_addCategory(newCategory));

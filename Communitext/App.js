@@ -7,6 +7,7 @@ import { Provider } from 'react-redux'
 import CategoryPage from './components/CategoryPage';
 import SubCategoryPage from './components/SubCategoryPage';
 import store from './store/store'
+import Sentences from './components/Sentences';
 
 
 const Stack = createStackNavigator();
@@ -18,6 +19,7 @@ const App = () => {
         <Stack.Navigator>
           <Stack.Screen name="Categories" component={CategoryPage} />
           <Stack.Screen name="Subcategory" component={SubCategoryPage} />
+          <Stack.Screen name="Sentences" component={Sentences}/>
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

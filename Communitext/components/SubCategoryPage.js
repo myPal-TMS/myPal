@@ -16,13 +16,12 @@ const SubCategoryPage = ({ navigation, route }) => {
         }
 
     }
-    console.log(subcategories)
     return (
         <ScrollView>
             {subcategories.map((subcategory) => (
-                <TouchableOpacity key={subcategory.id} onPress={() => alert(route.params.category)}>
+                <TouchableOpacity key={subcategory.id} onPress={() => navigation.navigate("Sentences", { subcategory: subcategory.title })}>
                     <Text>
-                        {subcategory.name}
+                        {subcategory.title}
                     </Text>
                 </TouchableOpacity>
             ))}
