@@ -2,53 +2,53 @@
 const Sequelize = require('sequelize');
 
 /**
- * Module Categories initialize the Categories table model
- * @namespace Categories
+ * Module Sentence initialize the Sentences table model
+ * @namespace Subcategories
  * @extends Sequelize.Model
  */
 module.exports = (sequelize) => {
-    class Categories extends Sequelize.Model {}
-    Categories.init({
-            CategoryID: {
+    class Sentence extends Sequelize.Model {}
+    Sentence.init({
+
+            SentenceID: {
                 type: Sequelize.INTEGER,
                 primaryKey: true,
                 autoIncrement: true,
                 allowNull: false,
                 validate: {
                     notEmpty: {
-                        msg: 'Please provide a value for "CategoryID"'
+                        msg: 'Please provide a value for "ID"'
                     },
                     notNull: {
-                        msg: 'Please provide a value for "CategoryID"'
+                        msg: 'Please provide a value for "ID"'
                     }
                 }
             },
-            catName: {
+
+            sentence: {
                 type: Sequelize.STRING,
                 allowNull: false,
                 validate: {
                     notEmpty: {
-                        msg: 'Please provide a value for "catName"'
+                        msg: 'Please provide a value for "sentences"'
                     },
                     notNull: {
-                        msg: 'Please provide a value for "catName"'
+                        msg: 'Please provide a value for "sentences"'
                     }
                 }
-            },
-            images: {
-                type: Sequelize.TEXT,
             },
         },
         {
             sequelize
         });
 
-    Categories.associate = (models) => {
-        // Associations
-        Categories.hasMany(models.SubCategories, {
-            foreignKey: 'CategoryID',
+    Sentence.associate = (models) => {
+        // Associations:
+        Sentence.belongsTo(models.SubCategory, {
+            foreignKey: 'subCategoryID',
         });
+
     };
 
-    return Categories;
+    return Sentence;
 };
