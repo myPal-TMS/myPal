@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import {
   View,
   Text,
@@ -11,12 +12,18 @@ import {
 
 import { useDispatch, useSelector } from "react-redux";
 import { _addCategory } from "../store/myPal_redux/actions";
+import { getCategories } from "../store/myPal_redux/thunks";
 
 const CategoryPage = ({ navigation }) => {
   
   const dispatch = useDispatch();
   const categories = useSelector(({categories}) => categories);
   const [Category, setCategory] = useState("");
+  
+  useEffect(() => {
+    dispatch(getCategories())
+  }, [])
+
 
   const addCategory = (newCategory) => {
     if (newCategory != "") {
@@ -26,15 +33,18 @@ const CategoryPage = ({ navigation }) => {
 
   return (
     <ScrollView>
-      {categories.map((category) => (
+      {
+      categories.map((category) => (
+        
         <TouchableOpacity
           key={category.id}
           onPress={() =>
-            navigation.navigate("Subcategory", { category: category.title })
+            
+            navigation.navigate("Subcategory", { category: category.name })
           }
         >
           <Image source={require("../assets/images/smiley.jpg")} />
-          <Text>{category.title}</Text>
+          <Text>{category.name}</Text>
         </TouchableOpacity>
       ))}
       <TextInput
