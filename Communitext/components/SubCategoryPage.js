@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ScrollView, Button, Text, TouchableOpacity, View, TextInput } from 'react-native';
 import { useDispatch, useSelector } from "react-redux"; 
 import { ADD_SUBCATEGORY } from '../store/constants';
 import { _addSubcategory} from "../store/myPal_redux/actions";
+import { getSubCategories } from '../store/myPal_redux/thunks';
 
 const SubCategoryPage = ({ navigation, route }) => {
     const dispatch = useDispatch ()
     //const [Food, addFood] = useState(["apple", "banana"])
     const subcategories = useSelector (({subcategories}) => subcategories)
     const [IndFood, setIndFood] = useState("")
+
+    useEffect (()=>{
+        dispatch (getSubCategories()) 
+    }, [])
+
     const testFood = (newFood) => {
         if (newFood != "") {
             dispatch (_addSubcategory(newFood))
