@@ -1,35 +1,46 @@
-import React, {useState} from 'react';
-import {ScrollView, Button, Text, TouchableOpacity, View, TextInput} from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { ScrollView, Button, Text, TouchableOpacity, View, TextInput } from 'react-native';
+import { useDispatch, useSelector } from "react-redux"; 
+import { ADD_SUBCATEGORY } from '../store/constants';
+import { _addSubcategory} from "../store/myPal_redux/actions";
+import { getSubCategories } from '../store/myPal_redux/thunks';
 
-const SubCategoryPage = ({navigation, route}) => {
-    const [Food, addFood] = useState (["apple", "banana"])
-    const [IndFood, setIndFood] = useState ("")
-    const testFood = (food) => {
-        if(food != ""){
-            addFood(oldState => [...oldState, food])
+const SubCategoryPage = ({ navigation, route }) => {
+    const dispatch = useDispatch ()
+    //const [Food, addFood] = useState(["apple", "banana"])
+    const subcategories = useSelector (({subcategories}) => subcategories)
+    const [IndFood, setIndFood] = useState("")
+
+    useEffect (()=>{
+        dispatch (getSubCategories()) 
+    }, [])
+
+    const testFood = (newFood) => {
+        if (newFood != "") {
+            dispatch (_addSubcategory(newFood))
             setIndFood("")
         }
-        
+
     }
     return (
-        <View>
-            {Food.map((element, index)=>(
-                <TouchableOpacity key = {index} onPress = {() => alert(route.params.category)}>
+        <ScrollView>
+            {subcategories.map((subcategory) => (
+                <TouchableOpacity key={subcategory.id} onPress={() => navigation.navigate("Sentences", { subcategory: subcategory.title })}>
                     <Text>
-                        {element}
+                        {subcategory.title}
                     </Text>
                 </TouchableOpacity>
             ))}
-            <Text>
+            {/* <Text>
                 Test
-            </Text>
-            <TextInput value = {IndFood} placeholder = "Enter new subcategory" onChangeText = {text => setIndFood(text)}/>
-            <Button title = "Submit" onPress = {() => {testFood(IndFood)}} />
+            </Text> */}
+            <TextInput value={IndFood} placeholder="Enter new subcategory" onChangeText={text => setIndFood(text)} />
+            <Button title="Submit" onPress={() => { testFood(IndFood) }} />
 
-            
-                
 
-        </View>
+
+
+        </ScrollView>
     )
 }
 export default SubCategoryPage
