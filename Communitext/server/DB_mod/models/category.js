@@ -15,25 +15,15 @@ module.exports = (sequelize) => {
                 autoIncrement: true,
                 allowNull: false,
                 validate: {
-                    notEmpty: {
-                        msg: 'Please provide a value for "CategoryID"'
-                    },
-                    notNull: {
-                        msg: 'Please provide a value for "CategoryID"'
-                    }
-                }
+                    notEmpty: true,
+                },
             },
             catName: {
                 type: Sequelize.STRING,
                 allowNull: false,
                 validate: {
-                    notEmpty: {
-                        msg: 'Please provide a value for "catName"'
-                    },
-                    notNull: {
-                        msg: 'Please provide a value for "catName"'
-                    }
-                }
+                    notEmpty: true,
+                },
             },
             images: {
                 type: Sequelize.TEXT,

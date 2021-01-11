@@ -15,26 +15,16 @@ module.exports = (sequelize) => {
                 autoIncrement: true,
                 allowNull: false,
                 validate: {
-                    notEmpty: {
-                        msg: 'Please provide a value for "ID"'
-                    },
-                    notNull: {
-                        msg: 'Please provide a value for "ID"'
-                    }
-                }
+                    notEmpty: true,
+                },
             },
 
             subName: {
                 type: Sequelize.STRING,
                 allowNull: false,
                 validate: {
-                    notEmpty: {
-                        msg: 'Please provide a value for "subcategory name"'
-                    },
-                    notNull: {
-                        msg: 'Please provide a value for "title"'
-                    }
-                }
+                    notEmpty: true,
+                },
             },
 
             images: {

@@ -10,7 +10,7 @@ const sequelize = new Sequelize({
     dialect: 'sqlite',
     storage: 'myPal.db',
     define: {
-        timestamps: true,
+        timestamps: false,
     },
     logging: false,
 });

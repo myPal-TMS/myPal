@@ -16,12 +16,7 @@ module.exports = (sequelize) => {
                 autoIncrement: true,
                 allowNull: false,
                 validate: {
-                    notEmpty: {
-                        msg: 'Please provide a value for "ID"'
-                    },
-                    notNull: {
-                        msg: 'Please provide a value for "ID"'
-                    }
+                    notEmpty: true
                 }
             },
 
@@ -29,12 +24,7 @@ module.exports = (sequelize) => {
                 type: Sequelize.STRING,
                 allowNull: false,
                 validate: {
-                    notEmpty: {
-                        msg: 'Please provide a value for "sentences"'
-                    },
-                    notNull: {
-                        msg: 'Please provide a value for "sentences"'
-                    }
+                    notEmpty: true
                 }
             },
         },
