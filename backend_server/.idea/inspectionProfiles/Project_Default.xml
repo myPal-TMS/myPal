@@ -1,0 +1,8 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="ES6TopLevelAwaitExpression" enabled="true" level="INFORMATION" enabled_by_default="true" />
+    <inspection_tool class="JSAnnotator" enabled="true" level="INFORMATION" enabled_by_default="true" />
+    <inspection_tool class="JSValidateTypes" enabled="true" level="INFORMATION" enabled_by_default="true" />
+  </profile>
+</component>
