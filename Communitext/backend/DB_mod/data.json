@@ -1,0 +1,862 @@
+{
+   "Categories": [ {
+        "CatName": "Greetings",
+        "CategoryID": 1,
+        "Images": "/assets/Images/Categories/Greetings/Greetings.png"
+    },
+    {
+        "CatName": "People",
+        "CategoryID": 2,
+        "Images": "/assets/Images/Categories/People/People.png"
+    },
+    {
+        "CatName": "Places",
+        "CategoryID": 3,
+        "Images": "/assets/Images/Categories/Places/Places.png"
+    },
+    {
+        "CatName": "Actions",
+        "CategoryID": 4,
+        "Images": "/assets/Images/Categories/Actions/Actions.png"
+    },
+    {
+        "CatName": "Opinions",
+        "CategoryID": 5,
+        "Images": "/assets/Images/Categories/Opinions/Opinions.png"
+    },
+    {
+        "CatName": "Questions",
+        "CategoryID": 6,
+        "Images": "/assets/Images/Categories/Questions/Questions.png"
+    },
+    {
+        "CatName": "Responses",
+        "CategoryID": 7,
+        "Images": "/assets/Images/Categories/Responses/Responses.png"
+    },
+    {
+        "CatName": "Feelings",
+        "CategoryID": 8,
+        "Images": "/assets/Images/Categories/Feelings/Feelings.png"
+    },
+    {
+        "CatName": "Emergency",
+        "CategoryID": 9,
+        "Images": "/assets/Images/Categories/Emergency/Emergency.png"
+    },
+    {
+        "CatName": "Food",
+        "CategoryID": 10,
+        "Images": "/assets/Images/Categories/Food/Food.png"
+    },
+    {
+        "CatName": "Animals",
+        "CategoryID": 11,
+        "Images": "/assets/Images/Categories/Animals/Animals.png"
+        }
+    ],
+    
+    "SubCategories":[{
+    
+        "CategoryID": 1,
+        "Images": "/assets/Images/Categories/Greetings/1.png",
+        "SubCategoryID": 1,
+        "SubName": "Hello"
+    },
+    {
+        "CategoryID": 1,
+        "Images": "/assets/Images/Categories/Greetings/2.png",
+        "SubCategoryID": 2,
+        "SubName": "Goodbyes"
+    },
+    {
+        "CategoryID": 2,
+        "Images": "/assets/Images/Categories/People/1.png",
+        "SubCategoryID": 3,
+        "SubName": "Family"
+    },
+    {
+        "CategoryID": 2,
+        "Images": "/assets/Images/Categories/People/2.png",
+        "SubCategoryID": 4,
+        "SubName": "Friends"
+    },
+    {
+        "CategoryID": 3,
+        "Images": "/assets/Images/Categories/Places/1.png",
+        "SubCategoryID": 5,
+        "SubName": "Home"
+    },
+    {
+        "CategoryID": 3,
+        "Images": "/assets/Images/Categories/Places/2.png",
+        "SubCategoryID": 6,
+        "SubName": "School"
+    },
+    {
+        "CategoryID": 3,
+        "Images": "/assets/Images/Categories/Places/3.png",
+        "SubCategoryID": 7,
+        "SubName": "Library"
+    },
+    {
+        "CategoryID": 4,
+        "Images": "/assets/Images/Categories/Actions/1.png",
+        "SubCategoryID": 8,
+        "SubName": "Read"
+    },
+    {
+        "CategoryID": 4,
+        "Images": "/assets/Images/Categories/Actions/2.png",
+        "SubCategoryID": 9,
+        "SubName": "Exercise"
+    },
+    {
+        "CategoryID": 4,
+        "Images": "/assets/Images/Categories/Actions/3.png",
+        "SubCategoryID": 10,
+        "SubName": "Talk"
+    },
+    {
+        "CategoryID": 5,
+        "Images": "/assets/Images/Categories/Opinions/1.png",
+        "SubCategoryID": 11,
+        "SubName": "Like"
+    },
+    {
+        "CategoryID": 5,
+        "Images": "/assets/Images/Categories/Opinions/2.png",
+        "SubCategoryID": 12,
+        "SubName": "Dislike"
+    },
+    {
+        "CategoryID": 6,
+        "Images": "/assets/Images/Categories/Questions/1.png",
+        "SubCategoryID": 13,
+        "SubName": "May I..."
+    },
+    {
+        "CategoryID": 6,
+        "Images": "/assets/Images/Categories/Questions/2.png",
+        "SubCategoryID": 14,
+        "SubName": "Do you..."
+    },
+    {
+        "CategoryID": 6,
+        "Images": "/assets/Images/Categories/Questions/3.png",
+        "SubCategoryID": 15,
+        "SubName": "Are we..."
+    },
+    {
+        "CategoryID": 7,
+        "Images": "/assets/Images/Categories/Responses/1.png",
+        "SubCategoryID": 16,
+        "SubName": "Yes"
+    },
+    {
+        "CategoryID": 7,
+        "Images": "/assets/Images/Categories/Responses/2.png",
+        "SubCategoryID": 17,
+        "SubName": "No"
+    },
+    {
+        "CategoryID": 7,
+        "Images": "/assets/Images/Categories/Responses/3.png",
+        "SubCategoryID": 18,
+        "SubName": "I have to"
+    },
+    {
+        "CategoryID": 7,
+        "Images": "/assets/Images/Categories/Responses/4.png",
+        "SubCategoryID": 19,
+        "SubName": "Apology"
+    },
+    {
+        "CategoryID": 8,
+        "Images": "/assets/Images/Categories/Feelings/1.png",
+        "SubCategoryID": 20,
+        "SubName": "Good"
+    },
+    {
+        "CategoryID": 8,
+        "Images": "/assets/Images/Categories/Feelings/2.png",
+        "SubCategoryID": 21,
+        "SubName": "Bad"
+    },
+    {
+        "CategoryID": 8,
+        "Images": "/assets/Images/Categories/Feelings/3.png",
+        "SubCategoryID": 22,
+        "SubName": "Confused"
+    },
+    {
+        "CategoryID": 9,
+        "Images": "/assets/Images/Categories/Emergency/1.png",
+        "SubCategoryID": 23,
+        "SubName": "911"
+    },
+    {
+        "CategoryID": 9,
+        "Images": "/assets/Images/Categories/Emergency/2.png",
+        "SubCategoryID": 24,
+        "SubName": "Doctor"
+    },
+    {
+        "CategoryID": 9,
+        "Images": "/assets/Images/Categories/Emergency/3.png",
+        "SubCategoryID": 25,
+        "SubName": "Bathroom"
+    },
+    {
+        "CategoryID": 10,
+        "Images": "/assets/Images/Categories/Food/1.png",
+        "SubCategoryID": 26,
+        "SubName": "Cereal"
+    },
+    {
+        "CategoryID": 10,
+        "Images": "/assets/Images/Categories/Food/2.png",
+        "SubCategoryID": 27,
+        "SubName": "Sandwich"
+    },
+    {
+        "CategoryID": 11,
+        "Images": "/assets/Images/Categories/Animals/1.png",
+        "SubCategoryID": 28,
+        "SubName": "Dog"
+    },
+    {
+        "CategoryID": 11,
+        "Images": "/assets/Images/Categories/Animals/2.png",
+        "SubCategoryID": 29,
+        "SubName": "Cat"
+        }
+    ],
+    "Sentences": [
+    {
+        "SentenceID": 1,
+        "SubCategoryID": 1,
+        "sentence": "Hi!"
+    },
+    {
+        "SentenceID": 2,
+        "SubCategoryID": 1,
+        "sentence": "Whats your name?"
+    },
+    {
+        "SentenceID": 3,
+        "SubCategoryID": 1,
+        "sentence": "How are you?"
+    },
+    {
+        "SentenceID": 4,
+        "SubCategoryID": 1,
+        "sentence": "Good morning!"
+    },
+    {
+        "SentenceID": 5,
+        "SubCategoryID": 1,
+        "sentence": "Good evening!"
+    },
+    {
+        "SentenceID": 6,
+        "SubCategoryID": 1,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 7,
+        "SubCategoryID": 2,
+        "sentence": "Bye."
+    },
+    {
+        "SentenceID": 8,
+        "SubCategoryID": 2,
+        "sentence": "See you later!"
+    },
+    {
+        "SentenceID": 9,
+        "SubCategoryID": 2,
+        "sentence": "I'll miss you!"
+    },
+    {
+        "SentenceID": 10,
+        "SubCategoryID": 2,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 11,
+        "SubCategoryID": 3,
+        "sentence": "She's my mom."
+    },
+    {
+        "SentenceID": 12,
+        "SubCategoryID": 3,
+        "sentence": "I need my mom."
+    },
+    {
+        "SentenceID": 13,
+        "SubCategoryID": 3,
+        "sentence": "I love my mom."
+    },
+    {
+        "SentenceID": 14,
+        "SubCategoryID": 3,
+        "sentence": "He's my dad."
+    },
+    {
+        "SentenceID": 15,
+        "SubCategoryID": 3,
+        "sentence": "I need my dad."
+    },
+    {
+        "SentenceID": 16,
+        "SubCategoryID": 3,
+        "sentence": "I love my dad."
+    },
+    {
+        "SentenceID": 17,
+        "SubCategoryID": 3,
+        "sentence": "I have a brother."
+    },
+    {
+        "SentenceID": 18,
+        "SubCategoryID": 3,
+        "sentence": "I have a sister."
+    },
+    {
+        "SentenceID": 19,
+        "SubCategoryID": 3,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 20,
+        "SubCategoryID": 4,
+        "sentence": "They are my friend."
+    },
+    {
+        "SentenceID": 21,
+        "SubCategoryID": 4,
+        "sentence": "That's my best friend."
+    },
+    {
+        "SentenceID": 22,
+        "SubCategoryID": 4,
+        "sentence": "Let's be friends."
+    },
+    {
+        "SentenceID": 23,
+        "SubCategoryID": 4,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 24,
+        "SubCategoryID": 5,
+        "sentence": "I need to go home."
+    },
+    {
+        "SentenceID": 25,
+        "SubCategoryID": 5,
+        "sentence": "Let's go home."
+    },
+    {
+        "SentenceID": 26,
+        "SubCategoryID": 5,
+        "sentence": "This is home."
+    },
+    {
+        "SentenceID": 27,
+        "SubCategoryID": 5,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 28,
+        "SubCategoryID": 6,
+        "sentence": "It's time for school."
+    },
+    {
+        "SentenceID": 29,
+        "SubCategoryID": 6,
+        "sentence": "I have to go to school."
+    },
+    {
+        "SentenceID": 30,
+        "SubCategoryID": 6,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 31,
+        "SubCategoryID": 7,
+        "sentence": "I like the library."
+    },
+    {
+        "SentenceID": 32,
+        "SubCategoryID": 7,
+        "sentence": "Let's go to the library."
+    },
+    {
+        "SentenceID": 33,
+        "SubCategoryID": 7,
+        "sentence": "Do you want to go to the library?"
+    },
+    {
+        "SentenceID": 34,
+        "SubCategoryID": 7,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 35,
+        "SubCategoryID": 8,
+        "sentence": "I like to read."
+    },
+    {
+        "SentenceID": 36,
+        "SubCategoryID": 8,
+        "sentence": "I don't like reading."
+    },
+    {
+        "SentenceID": 37,
+        "SubCategoryID": 8,
+        "sentence": "What are you reading?"
+    },
+    {
+        "SentenceID": 38,
+        "SubCategoryID": 8,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 39,
+        "SubCategoryID": 9,
+        "sentence": "I like to run."
+    },
+    {
+        "SentenceID": 40,
+        "SubCategoryID": 9,
+        "sentence": "You you want to workout with me?"
+    },
+    {
+        "SentenceID": 41,
+        "SubCategoryID": 9,
+        "sentence": "Let's go for a run."
+    },
+    {
+        "SentenceID": 42,
+        "SubCategoryID": 9,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 43,
+        "SubCategoryID": 10,
+        "sentence": "I need to speak with you."
+    },
+    {
+        "SentenceID": 44,
+        "SubCategoryID": 10,
+        "sentence": "I like to talk."
+    },
+    {
+        "SentenceID": 45,
+        "SubCategoryID": 10,
+        "sentence": "I like talking to you.\r\n\"Can we talk?"
+    },
+    {
+        "SentenceID": 46,
+        "SubCategoryID": 10,
+        "sentence": "Can we talk?"
+    },
+    {
+        "SentenceID": 47,
+        "SubCategoryID": 10,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 48,
+        "SubCategoryID": 11,
+        "sentence": "I like it."
+    },
+    {
+        "SentenceID": 49,
+        "SubCategoryID": 11,
+        "sentence": "I love that."
+    },
+    {
+        "SentenceID": 50,
+        "SubCategoryID": 11,
+        "sentence": "I would like to."
+    },
+    {
+        "SentenceID": 51,
+        "SubCategoryID": 11,
+        "sentence": "I would love that."
+    },
+    {
+        "SentenceID": 52,
+        "SubCategoryID": 11,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 53,
+        "SubCategoryID": 12,
+        "sentence": "I don't like that."
+    },
+    {
+        "SentenceID": 54,
+        "SubCategoryID": 12,
+        "sentence": "I would rather not."
+    },
+    {
+        "SentenceID": 55,
+        "SubCategoryID": 12,
+        "sentence": "I don't think so."
+    },
+    {
+        "SentenceID": 56,
+        "SubCategoryID": 12,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 57,
+        "SubCategoryID": 13,
+        "sentence": "May I?"
+    },
+    {
+        "SentenceID": 58,
+        "SubCategoryID": 13,
+        "sentence": "May I go?"
+    },
+    {
+        "SentenceID": 59,
+        "SubCategoryID": 13,
+        "sentence": "May I have some?"
+    },
+    {
+        "SentenceID": 60,
+        "SubCategoryID": 13,
+        "sentence": "Add "
+    },
+    {
+        "SentenceID": 61,
+        "SubCategoryID": 14,
+        "sentence": "Do you think so?"
+    },
+    {
+        "SentenceID": 62,
+        "SubCategoryID": 14,
+        "sentence": "Do you want to?"
+    },
+    {
+        "SentenceID": 63,
+        "SubCategoryID": 14,
+        "sentence": "Do you have to?"
+    },
+    {
+        "SentenceID": 64,
+        "SubCategoryID": 14,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 65,
+        "SubCategoryID": 15,
+        "sentence": "Are we going?"
+    },
+    {
+        "SentenceID": 66,
+        "SubCategoryID": 15,
+        "sentence": "Are we supposed to?"
+    },
+    {
+        "SentenceID": 67,
+        "SubCategoryID": 15,
+        "sentence": "You and me?"
+    },
+    {
+        "SentenceID": 68,
+        "SubCategoryID": 15,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 69,
+        "SubCategoryID": 16,
+        "sentence": "Yes."
+    },
+    {
+        "SentenceID": 70,
+        "SubCategoryID": 16,
+        "sentence": "Yes please."
+    },
+    {
+        "SentenceID": 71,
+        "SubCategoryID": 16,
+        "sentence": "Yeah!"
+    },
+    {
+        "SentenceID": 72,
+        "SubCategoryID": 16,
+        "sentence": "Of course."
+    },
+    {
+        "SentenceID": 73,
+        "SubCategoryID": 16,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 74,
+        "SubCategoryID": 17,
+        "sentence": "No."
+    },
+    {
+        "SentenceID": 75,
+        "SubCategoryID": 17,
+        "sentence": "No thank you."
+    },
+    {
+        "SentenceID": 76,
+        "SubCategoryID": 17,
+        "sentence": "Not."
+    },
+    {
+        "SentenceID": 77,
+        "SubCategoryID": 17,
+        "sentence": "Of course not."
+    },
+    {
+        "SentenceID": 78,
+        "SubCategoryID": 17,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 79,
+        "SubCategoryID": 18,
+        "sentence": "I have to."
+    },
+    {
+        "SentenceID": 80,
+        "SubCategoryID": 18,
+        "sentence": "I have to go."
+    },
+    {
+        "SentenceID": 81,
+        "SubCategoryID": 18,
+        "sentence": "I have to go to the bathroom."
+    },
+    {
+        "SentenceID": 82,
+        "SubCategoryID": 18,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 83,
+        "SubCategoryID": 19,
+        "sentence": "I'm sorry."
+    },
+    {
+        "SentenceID": 84,
+        "SubCategoryID": 19,
+        "sentence": "I apologize."
+    },
+    {
+        "SentenceID": 85,
+        "SubCategoryID": 19,
+        "sentence": "Pardon me."
+    },
+    {
+        "SentenceID": 86,
+        "SubCategoryID": 19,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 87,
+        "SubCategoryID": 20,
+        "sentence": "I feel good."
+    },
+    {
+        "SentenceID": 88,
+        "SubCategoryID": 20,
+        "sentence": "I feel great!."
+    },
+    {
+        "SentenceID": 89,
+        "SubCategoryID": 20,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 90,
+        "SubCategoryID": 21,
+        "sentence": "I don't feel good."
+    },
+    {
+        "SentenceID": 91,
+        "SubCategoryID": 21,
+        "sentence": "I feel bad."
+    },
+    {
+        "SentenceID": 92,
+        "SubCategoryID": 21,
+        "sentence": "Do you feel ok?"
+    },
+    {
+        "SentenceID": 93,
+        "SubCategoryID": 21,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 94,
+        "SubCategoryID": 22,
+        "sentence": "I'm confused."
+    },
+    {
+        "SentenceID": 95,
+        "SubCategoryID": 22,
+        "sentence": "I don't understand."
+    },
+    {
+        "SentenceID": 96,
+        "SubCategoryID": 22,
+        "sentence": "Are you confused?"
+    },
+    {
+        "SentenceID": 97,
+        "SubCategoryID": 22,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 98,
+        "SubCategoryID": 23,
+        "sentence": "Call 911."
+    },
+    {
+        "SentenceID": 99,
+        "SubCategoryID": 23,
+        "sentence": "I'm hurt."
+    },
+    {
+        "SentenceID": 100,
+        "SubCategoryID": 23,
+        "sentence": "They are hurt."
+    },
+    {
+        "SentenceID": 101,
+        "SubCategoryID": 23,
+        "sentence": "It's an emergency."
+    },
+    {
+        "SentenceID": 102,
+        "SubCategoryID": 23,
+        "sentence": "Ambulance."
+    },
+    {
+        "SentenceID": 103,
+        "SubCategoryID": 23,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 104,
+        "SubCategoryID": 24,
+        "sentence": "I need a doctor."
+    },
+    {
+        "SentenceID": 105,
+        "SubCategoryID": 24,
+        "sentence": "They need a doctor.\r\n\"Take me to the doctor."
+    },
+    {
+        "SentenceID": 106,
+        "SubCategoryID": 24,
+        "sentence": "Take me to the doctor."
+    },
+    {
+        "SentenceID": 107,
+        "SubCategoryID": 24,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 108,
+        "SubCategoryID": 25,
+        "sentence": "May I use the bathroom?"
+    },
+    {
+        "SentenceID": 109,
+        "SubCategoryID": 25,
+        "sentence": "Where is the bathroom?"
+    },
+    {
+        "SentenceID": 110,
+        "SubCategoryID": 25,
+        "sentence": "I need a bathroom."
+    },
+    {
+        "SentenceID": 111,
+        "SubCategoryID": 25,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 112,
+        "SubCategoryID": 26,
+        "sentence": "I like cereal."
+    },
+    {
+        "SentenceID": 113,
+        "SubCategoryID": 26,
+        "sentence": "May I have some cereal?"
+    },
+    {
+        "SentenceID": 114,
+        "SubCategoryID": 26,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 115,
+        "SubCategoryID": 27,
+        "sentence": "I like sandwiches."
+    },
+    {
+        "SentenceID": 116,
+        "SubCategoryID": 27,
+        "sentence": "May I have a sandwich?"
+    },
+    {
+        "SentenceID": 117,
+        "SubCategoryID": 27,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 118,
+        "SubCategoryID": 28,
+        "sentence": "I have a dog."
+    },
+    {
+        "SentenceID": 119,
+        "SubCategoryID": 28,
+        "sentence": "I like dogs."
+    },
+    {
+        "SentenceID": 120,
+        "SubCategoryID": 28,
+        "sentence": "I want a dog."
+    },
+    {
+        "SentenceID": 121,
+        "SubCategoryID": 28,
+        "sentence": "Add"
+    },
+    {
+        "SentenceID": 122,
+        "SubCategoryID": 29,
+        "sentence": "I have a cat."
+    },
+    {
+        "SentenceID": 123,
+        "SubCategoryID": 29,
+        "sentence": "I like cats."
+    },
+    {
+        "SentenceID": 124,
+        "SubCategoryID": 29,
+        "sentence": "I want a cat."
+    },
+    {
+        "SentenceID": 125,
+        "SubCategoryID": 29,
+        "sentence": "Add"
+    }
+]
+}
