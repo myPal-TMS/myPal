@@ -25,3 +25,15 @@ export const getSubCategories = () => {
         }
     }
 }
+
+export const getSentences = () => {
+    return async (dispatch) => {
+        try {
+            const {data} = await axios.get("https://jsonplaceholder.typicode.com/todos")
+            dispatch(_getSentences(data))
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
+}

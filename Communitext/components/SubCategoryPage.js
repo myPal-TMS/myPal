@@ -15,6 +15,7 @@ const SubCategoryPage = ({ navigation, route }) => {
         dispatch (getSubCategories()) 
     }, [])
 
+      
     const testFood = (newFood) => {
         if (newFood != "") {
             dispatch (_addSubcategory(newFood))
@@ -22,6 +23,7 @@ const SubCategoryPage = ({ navigation, route }) => {
         }
 
     }
+
     return (
         <ScrollView>
             {subcategories.map((subcategory) => (

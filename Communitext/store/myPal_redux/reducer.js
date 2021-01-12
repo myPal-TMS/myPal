@@ -5,14 +5,15 @@ import {
     ADD_CATEGORY, ADD_SUBCATEGORY, ADD_SENTENCE
 } from '../constants'
 
-// let catID = 0;
+//let catID = 20;
 let subID = 0;
 let sentID = 0;
 
-// const initialCatState = [{ id: 0, title: "cat1" }]
+//const initialCatState = [{ id: 0, title: "cat1" }]
 
-const initialSubCatState = [{ id: 0, title: "subcat1"}]
-const initialSentenceState = [{ id: 0, sentence: "hello world"}]
+//const initialSubCatState = [{ id: 0, title: "subcat1"}]
+//const initialSentenceState = [{ id: 0, sentence: "hello world"}]
+
 export const catReducer = (state = [], action) => {
     switch (action.type) {
         case ADD_CATEGORY:
@@ -31,7 +32,7 @@ export const catReducer = (state = [], action) => {
     }
 }
 
-export const subCatReducer = (state = initialSubCatState, action) => {
+export const subCatReducer = (state = [], action) => {
     switch (action.type){
         case ADD_SUBCATEGORY:
             return [
@@ -42,13 +43,14 @@ export const subCatReducer = (state = initialSubCatState, action) => {
                 }
             ]
          case GET_SUBCATEGORIES:
+            state = action.subcategories.slice(0, 10)
             return state
          default: 
             return state
     }
 }
 
-export const sentenceReducer = (state = initialSentenceState, action) => {
+export const sentenceReducer = (state = [], action) => {
     switch (action.type){
         case ADD_SENTENCE:
             return [
@@ -59,6 +61,7 @@ export const sentenceReducer = (state = initialSentenceState, action) => {
                 }
             ]
         case GET_SENTENCES:
+            state = action.sentences.slice(0,10)
             return state
         default: 
             return state
