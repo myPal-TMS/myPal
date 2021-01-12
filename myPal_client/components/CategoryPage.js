@@ -1,51 +1,66 @@
-import React,{useState} from 'react';
+import React, { useState, useEffect } from "react";
+
 import {
-    View,
-    Text,
-    TouchableOpacity,
-    Image,
-    ScrollView,
-    TextInput,
-    Button
-} from 'react-native';
+  View,
+  Text,
+  TouchableOpacity,
+  Image,
+  ScrollView,
+  TextInput,
+  Button,
+} from "react-native";
+
+import { useDispatch, useSelector } from "react-redux";
+import { _addCategory } from "../store/myPal_redux/actions";
+import { getCategories } from "../store/myPal_redux/thunks";
+
+const CategoryPage = ({ navigation }) => {
+  
+  const dispatch = useDispatch();
+  const categories = useSelector(({categories}) => categories);
+  const [Category, setCategory] = useState("");
+  
+  useEffect(() => {
+    dispatch(getCategories())
+  }, [])
 
 
-const CategoryPage = ({navigation}) => {
-    const [categories, setCategories] = useState(["category1", "category2", "category3", "category4", "category5", "category6"]);
-    const [Category, setCategory] = useState("");
-
-    const addCategory = (newCategory) => {
-        if(newCategory != "")
-        {
-            setCategories(oldState => [...oldState, newCategory]);
-        }
+  const addCategory = (newCategory) => {
+    if (newCategory != "") {
+      dispatch(_addCategory(newCategory));
     }
-
-    return(
-        <ScrollView>
-            {categories.map((category,index) => (
-         <TouchableOpacity
-                        key = {index}
-                        onPress={() =>
-                            navigation.navigate('Subcategory', {category: category})}>
-                        <Image source = {require('../assets/Images/Categories/Animals/1.png')}/>
-                        <Text>
-                            {category}
-                        </Text>
-         </TouchableOpacity>
-
-
-                   ))}
-            <TextInput
-                value = {Category}
-                placeholder = "Enter new category"
-                onChangeText = {text =>
-                    setCategory(text)} />
-            <Button title = "Submit"
-                    onPress = {() => {addCategory(Category);
-                    setCategory("")}}/>
-        </ScrollView>
-    )
-        }
+  };
+console.log(categories)
+  return (
+    <ScrollView>
+      {
+      categories.map((category) => (
+        
+        <TouchableOpacity
+          key={category.CategoryID}
+          onPress={() =>
+            
+            navigation.navigate("Subcategory", { category: category.catName })
+          }
+        >
+          <Image source={require("../assets/Images/Categories/Animals/1.png")} />
+          <Text>{category.catName}</Text>
+        </TouchableOpacity>
+      ))}
+      <TextInput
+        value={Category}
+        placeholder="Enter new category"
+        onChangeText={(text) => setCategory(text)}
+      />
+      <Button
+        title="Submit"
+        onPress={() => {
+          addCategory(Category);
+          setCategory("");
+        }}
+      />
+    </ScrollView>
+  );
+};
 
 export default CategoryPage;

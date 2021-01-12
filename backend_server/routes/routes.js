@@ -12,9 +12,11 @@ module.exports = router
  * @returns {Promise} If resolve it will respond with all categories in JSON format. If it throws, pass the error to the global error middleware.
  *
  */
-router.get('/getCat',async (req,res,next)=>{
+router.get('/getCat',async (req,res ,next)=>{
     models.Category.findAll().then(fetchedData=> {
+        res.set('Access-Control-Allow-Origin', '*');
         res.json(fetchedData);
+
     })
 })
 
