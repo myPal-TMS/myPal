@@ -21,10 +21,11 @@ export const allCategories = (callback) => {
     db.transaction(tx => {
         tx.executeSql('SELECT * FROM Categories;', [], (tx, results) => {
             let size = results.rows.length
-            for(let i = 0; i< size; i++){
-                categories.push(results.rows.item(i))
-            }
-            callback(categories)
+            // console.log(results.rows._array)
+            // for(let i = 0; i< size; i++){
+            //     categories.push(results.rows.item(i))
+            // }
+            callback(results.rows._array)
         }, (error) => {console.log(error)})
     }) 
 }
