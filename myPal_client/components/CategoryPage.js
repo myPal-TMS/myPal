@@ -30,7 +30,7 @@ const CategoryPage = ({ navigation }) => {
       dispatch(_addCategory(newCategory));
     }
   };
-console.log(categories)
+
   return (
     <ScrollView>
       {

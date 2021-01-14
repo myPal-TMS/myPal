@@ -1,12 +1,15 @@
 import axios from 'axios';
+import { allCategories } from '../../api';
 import { _getCategories, _getSentences, _getSubcategories } from './actions';
 
 
 export const getCategories = () => {
     return async (dispatch) => {
         try{
-            const {data} = await axios.get("http://localhost:3000/api/getCat")
-            dispatch(_getCategories(data))
+            allCategories((categories) => {
+                dispatch(_getCategories(categories))
+            })
+            
         }
         catch (err){
             console.log(err)
