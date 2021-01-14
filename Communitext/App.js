@@ -17,9 +17,9 @@ const App = () => {
     <Provider store={store}>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Categories" component={CategoryPage} />
-          <Stack.Screen name="Subcategory" component={SubCategoryPage} />
-          <Stack.Screen name="Sentences" component={Sentences}/>
+          <Stack.Screen name = "myPAL" component = {CategoryPage} />
+          <Stack.Screen name = "Subcategory" component = {SubCategoryPage} options={({ route }) => ({ title: route.params.category })}/>
+          <Stack.Screen name = "Sentences" component = {Sentences} options = {({ route }) => ({ title: route.params.subcategory })}/>
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

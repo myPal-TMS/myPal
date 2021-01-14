@@ -1,6 +1,6 @@
 // A common style that can be used in more than one component which can be define here, i found shadow, evlevation as common requirement in my projects. You can alter, add as you like.
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import {Font} from 'expo';
 
 /*
@@ -23,31 +23,72 @@ export class customText extends React.Component {
 }
 
 */
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
 
   container: {
     //flex: 1,
-    padding: 40,
+    paddingBottom: 30,
+    //paddingHorizontal: 30,
     backgroundColor: '#CBC2B9',
+    width: windowWidth,
+    //height: windowHeight,
+    //flexDirection: 'row'
     //fontFamily: 'Dosis-Bold'
+    //justifyContent: 'space-between',
+    //alignItems: 'center'
+    
+    
+
+  },
+
+  gallery: {
+    
+    //flex: 2,
+    //flexDirection: 'row',
+    //justifyContent: 'space-evenly',
+    
+    //flexWrap: 'wrap',
+    //paddingRight: 20,
+    //marginLeft: 30
+    //justifyContent: 'space-between',
+    //flexWrap: 'wrap',
+    width: windowWidth,
+    //height: windowHeight,
+    //paddingBottom: 30,
+    alignItems: 'center',
+    
+    
+    
+    
+    
   },
 
   button: {
     flex: 2,
-    flexDirection: 'column',
-    padding: 10,
+    //flexDirection: 'column',
+    //justifyContent: 'space-between',
+    padding: 5,
     alignItems: 'center',
     marginTop: 30,
     backgroundColor: '#F4E4D5',
     width: 150,
+    height: 200,
     borderRadius: 20,
+
+    
     
   },
+
+
+
+
   picture: {
     flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
+    flexDirection: 'row',
+    //alignItems: 'center',
     aspectRatio: 1/1,
     width: 100,
     height: 100,
@@ -62,14 +103,18 @@ const styles = StyleSheet.create({
     //fontFamily: 'Dosis-Bold',
     //fontStyle: normal,
     fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: 25,
     lineHeight: 25,
     //display: flex,
     //alignSelf: 'center',
-    flex: 1,
+    //flex: 1,
     flexDirection: 'column',
     alignItems: 'center',
-    
+    textAlign: 'center',
+    flex: 0.5,
+    flexDirection: 'column',
+  
+  
     
     color: '#FFFFFF'
   },

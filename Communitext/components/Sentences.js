@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ScrollView, Button, Text, TouchableOpacity, View, TextInput } from 'react-native';
 import { useDispatch, useSelector } from "react-redux"; 
 import { _addSentence } from "../store/myPal_redux/actions";
+import styles from './styles/sentencePageStyles';
 
 const Sentences = ({navigation, route}) => {
         const dispatch = useDispatch ()
@@ -15,10 +16,16 @@ const Sentences = ({navigation, route}) => {
 
     }
     return (
-        <ScrollView>
+        <ScrollView
+        style = {styles.container}>
+            <View
+            styles = {styles.gallery}>
             {sentences.map((sentence) => (
-                <TouchableOpacity key={sentence.id} onPress={() => alert(route.params.subcategory)}>
-                    <Text>
+                <TouchableOpacity 
+                style = {styles.sentenceButton}
+                key={sentence.id} onPress={() => alert(route.params.subcategory)}>
+                    <Text
+                    style = {styles.text}>
                         {sentence.sentence}
                     </Text>
                 </TouchableOpacity>
@@ -26,10 +33,19 @@ const Sentences = ({navigation, route}) => {
             {/* <Text>
                 Test
             </Text> */}
-            <TextInput value={IndSentence} placeholder="Enter new sentence" onChangeText={text => setIndSentence(text)} />
-            <Button title="Submit" onPress={() => { testSentence(IndSentence) }} />
-
-
+            <TextInput 
+            style = {styles.submitText}
+            value={IndSentence} placeholder="Enter new sentence" onChangeText={text => setIndSentence(text)} />
+            <TouchableOpacity 
+            style = {styles.submitButton} 
+            onPress={() => { testSentence(IndSentence) }} 
+            
+            >
+                <Text>
+                    Submit
+                </Text>
+            </TouchableOpacity>
+            </View>
 
 
         </ScrollView>

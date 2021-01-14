@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { ScrollView, Button, Text, TouchableOpacity, View, TextInput } from 'react-native';
+import { ScrollView, Button, Text, TouchableOpacity, View, Image, TextInput } from 'react-native';
 import { useDispatch, useSelector } from "react-redux"; 
 import { ADD_SUBCATEGORY } from '../store/constants';
 import { _addSubcategory} from "../store/myPal_redux/actions";
 import { getSubCategories } from '../store/myPal_redux/thunks';
+import styles from './styles/subCategoryPageStyles';
 
 const SubCategoryPage = ({ navigation, route }) => {
     const dispatch = useDispatch ()
@@ -23,19 +24,33 @@ const SubCategoryPage = ({ navigation, route }) => {
 
     }
     return (
-        <ScrollView>
+        <ScrollView
+        style = {styles.container}>
+
+            <View
+            style = {styles.gallery}>
             {subcategories.map((subcategory) => (
-                <TouchableOpacity key={subcategory.id} onPress={() => navigation.navigate("Sentences", { subcategory: subcategory.title })}>
-                    <Text>
-                        {subcategory.title}
-                    </Text>
-                </TouchableOpacity>
-            ))}
+
+                <TouchableOpacity 
+                key={subcategory.id} 
+                onPress={() => navigation.navigate("Sentences", { subcategory: subcategory.title })}
+                style = {styles.button}>
+
+                    <Image source = {require("../assets/Images/Categories/Actions/1.png")}
+		            style = {styles.picture} />
+
+                        <Text
+                        style = {styles.text}>
+                            {subcategory.title}
+                        </Text>
+
+                    </TouchableOpacity>
+                ))}
+                </View>
             {/* <Text>
                 Test
             </Text> */}
-            <TextInput value={IndFood} placeholder="Enter new subcategory" onChangeText={text => setIndFood(text)} />
-            <Button title="Submit" onPress={() => { testFood(IndFood) }} />
+
 
 
 
