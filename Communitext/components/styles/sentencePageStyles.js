@@ -55,32 +55,17 @@ const styles = StyleSheet.create({
     //marginLeft: 30
     //justifyContent: 'space-between',
     //flexWrap: 'wrap',
-    width: windowWidth-10,
+    width: windowWidth,
     //height: windowHeight,
     //paddingBottom: 30,
-    //alignItems: 'center',
-    
-    
-    
-    
-    
-  },
-
-  button: {
-    flex: 2,
-    //flexDirection: 'column',
-    //justifyContent: 'space-between',
-    padding: 5,
     alignItems: 'center',
-    marginTop: 30,
-    backgroundColor: '#F4E4D5',
-    width: 100,
-    height: 200,
-    borderRadius: 20,
-
+    
+    
+    
     
     
   },
+
 
   sentenceButton: {
     //flex: 2,
@@ -97,7 +82,7 @@ const styles = StyleSheet.create({
     
   },
 
-  submitText: {
+  newSentenceText: {
     //fontFamily: 'Dosis-Bold',
     //fontStyle: normal,
     marginTop: 20,
@@ -113,26 +98,44 @@ const styles = StyleSheet.create({
     //letterSpacing: 1,
     alignItems: 'center',
     color: '#FFFFFF',
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#F4E4D5',
     
     alignItems: 'center',
-    borderColor: 'black'
+    borderRadius: 20,
+    marginTop: 40,
+    marginLeft: 50,
+    marginRight: 50
+
     
   },
   
   submitButton: {
-    //flex: 2,
-    //flexDirection: 'column',
+    // flex: 1,
+    // flexDirection: 'column',
     //justifyContent: 'space-between',
-    padding: 10,
+    //padding: 10,
     alignItems: 'center',
-    marginTop: 30,
-    backgroundColor: '#FFFFFF',
-    height: 20,
-    width: 100,
+    marginTop: 10,
+    backgroundColor: '#84D2F4',
+    height: 40,
     
+    marginLeft: 140,
+    marginRight: 140,
     borderRadius: 20,
+    marginHorizontal: 70
 
+    
+    
+  },
+  submitButtonText: {
+    marginTop: 8,
+    fontSize: 25,
+    lineHeight: 25,
+    //flexDirection: 'row',
+    alignItems: 'center',
+    textAlign: 'center',
+    alignItems: 'center',
+    color: 'white'
     
     
   },
@@ -151,10 +154,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     textAlign: 'center',
     //letterSpacing: 1,
-   
+    // textShadowColor: '#000000',
+    // textShadowOffset: {width: 0, height: 0},
+    // textShadowRadius: 1.5,
     
     
-    color: '#FFFFFF'
+    color: '#000000'
   },
 });
 

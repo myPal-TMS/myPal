@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     //justifyContent: 'space-evenly',
     //flexWrap: 'wrap',
     //paddingHorizontal: 20,
-    marginLeft: 40,
+    //marginLeft: 40,
     
     //flexWrap: 'wrap',
     width: windowWidth,
@@ -79,14 +79,15 @@ const styles = StyleSheet.create({
     padding: 5,
     alignItems: 'center',
     //marginTop: 30,
-    marginBottom: 10,
+    //flexWrap: 'wrap',
     backgroundColor: '#F4E4D5',
     width: 150,
     height: 200,
     borderRadius: 20,
-    marginRight: 50,
-    marginTop: 30
-
+    marginRight: windowWidth / 20,
+    marginLeft: windowWidth / 20,
+    marginTop: 20,
+    marginBottom: 20,
     
     
   },
@@ -115,9 +116,10 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     //alignItems: 'center',
     textAlign: 'center',
-    
-    
-    color: '#FFFFFF'
+    // textShadowColor: '#000000',
+    // textShadowOffset: {width: 0, height: 0},
+    // textShadowRadius: 1.5,
+    color: '#000000'
   },
 });
 

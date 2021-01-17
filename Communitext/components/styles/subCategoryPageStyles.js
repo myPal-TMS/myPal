@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 30,
     backgroundColor: '#F4E4D5',
-    width: 150,
+    width: 200,
     height: 200,
     borderRadius: 20,
 
@@ -100,11 +100,11 @@ const styles = StyleSheet.create({
 
   },
   text: {
-    //fontFamily: 'Dosis-Bold',
+    //fontFamily: 'sans serif',
     //fontStyle: normal,
     fontWeight: 'bold',
     fontSize: 25,
-    lineHeight: 25,
+    //lineHeight: 25,
     //display: flex,
     //alignSelf: 'center',
     //flex: 1,
@@ -113,10 +113,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     flex: 0.5,
     flexDirection: 'column',
-  
+    // textShadowColor: '#000000',
+    // textShadowOffset: {width: 0, height: 0},
+    // textShadowRadius: 1.5,
   
     
-    color: '#FFFFFF'
+    color: '#000000'
   },
 });
 

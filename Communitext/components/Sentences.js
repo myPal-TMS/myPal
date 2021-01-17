@@ -30,19 +30,18 @@ const Sentences = ({navigation, route}) => {
                     </Text>
                 </TouchableOpacity>
             ))}
-            {/* <Text>
-                Test
-            </Text> */}
+
             <TextInput 
-            style = {styles.submitText}
+            style = {styles.newSentenceText}
             value={IndSentence} placeholder="Enter new sentence" onChangeText={text => setIndSentence(text)} />
             <TouchableOpacity 
             style = {styles.submitButton} 
             onPress={() => { testSentence(IndSentence) }} 
             
             >
-                <Text>
-                    Submit
+                <Text
+                style = {styles.submitButtonText}>
+                    submit
                 </Text>
             </TouchableOpacity>
             </View>
