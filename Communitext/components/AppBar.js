@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     alignItems: 'center',
     // textDecorationLine: 'underline',
-    //   textAlign:"center"
+    textAlign:"center",
   },
 });
 
