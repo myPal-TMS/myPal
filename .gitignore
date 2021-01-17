@@ -22,3 +22,5 @@ myPal_client/web-build/
 # macOS
 .DS_Store
 Communitext/.DS_Store
+node_modules/**/*
+.idea

@@ -11,8 +11,11 @@ const SubCategoryPage = ({ navigation, route }) => {
     const [Subcategory, setSubcategory] = useState("")
 
     useEffect (()=>{
-        dispatch (getSubCategories( route.params.categoryId ))
+        
+        dispatch (getSubCategories( route.params.categoryID ))
     }, [])
+
+    console.log(subcategories);
 
     const addSubcategory = (newSubcategory) => {
         if (newSubcategory != "") {
@@ -29,7 +32,7 @@ const SubCategoryPage = ({ navigation, route }) => {
                     key={subcategory.SubCategoryID}
                   cons
                     onPress={() =>
-                        navigation.navigate("Sentences", { subcategory: subcategory.subName })}>
+                        navigation.navigate("Sentences", { subcatID: subcategory.SubCategoryID })}>
                     <Text>
                         {subcategory.subName}
                     </Text>

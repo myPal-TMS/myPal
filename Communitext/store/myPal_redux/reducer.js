@@ -60,7 +60,9 @@ export const sentenceReducer = (state = initialSentenceState, action) => {
                 }
             ]
         case GET_SENTENCES:
+            state = action.sentences
             return state
+
         default: 
             return state
     }

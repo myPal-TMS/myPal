@@ -24,9 +24,19 @@ export const allCategories = (callback) => {
     }) 
 }
 
-export const allSubcategories = (callback, categoryID) => {
-    db.transaction(tx => {
+export const allSubcategories = (categoryID,callback) => {
+    db.transaction((tx) => {
+
         tx.executeSql('SELECT * FROM SubCategories WHERE categoryID = ?',[categoryID], (tx, results) => {
+            callback(results.rows._array)
+        },(error) => {console.log(error)} )
+    })
+}
+
+export const allSentences = (subcatID,callback) => {
+    db.transaction((tx) => {
+
+        tx.executeSql('SELECT * FROM Sentences WHERE subcatID = ?',[subcatID], (tx, results) => {
             callback(results.rows._array)
         },(error) => {console.log(error)} )
     })
