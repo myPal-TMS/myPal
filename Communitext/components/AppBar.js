@@ -101,6 +101,7 @@ const styles = StyleSheet.create({
   },
   centerNavText: {
     fontSize: 18,
+    alignItems: 'center',
     // textDecorationLine: 'underline',
     //   textAlign:"center"
   },
