@@ -17,12 +17,12 @@ export const getCategories = () => {
     }
 }
 
-export const getSubCategories = () => {
+export const getSubCategories = (categoryID) => {
     return async (dispatch) => {
         try{
             allSubcategories((subcategories) => {
                 dispatch(_getSubcategories(subcategories))
-            })
+            }, categoryID)
         }
         catch (err){
             console.log(err)

@@ -24,9 +24,9 @@ export const allCategories = (callback) => {
     }) 
 }
 
-export const allSubcategories = (callback) => {
+export const allSubcategories = (callback, categoryID) => {
     db.transaction(tx => {
-        tx.executeSql('SELECT * FROM SubCategories', [], (tx, results) => {
+        tx.executeSql('SELECT * FROM SubCategories WHERE categoryID = ?',[categoryID], (tx, results) => {
             callback(results.rows._array)
         },(error) => {console.log(error)} )
     })

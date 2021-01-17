@@ -13,6 +13,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { _addCategory } from "../store/myPal_redux/actions";
 import { getCategories } from "../store/myPal_redux/thunks";
+import {useReduxContext} from "react-redux/lib/hooks/useReduxContext";
 
 const CategoryPage = ({ navigation }) => {
   
@@ -22,7 +23,7 @@ const CategoryPage = ({ navigation }) => {
   
   useEffect(() => {
     dispatch(getCategories())
-      console.log(categories)
+      // console.log(categories)
   }, [])
 
 
@@ -41,7 +42,7 @@ const CategoryPage = ({ navigation }) => {
           key={category.CategoryID}
           onPress={() =>
             
-            navigation.navigate("Subcategory", { category: category.catName })
+            navigation.navigate("Subcategory", { categoryID: category.CategoryID })
           }
         >
           {/*<Image source={require("../assets/Images/Categories/Animals/1.png")} />*/}
@@ -51,7 +52,7 @@ const CategoryPage = ({ navigation }) => {
       <TextInput
         value={Category}
         placeholder="Enter new category"
-        onChangeText={(text) => setCategory(text)}
+        onChangeText={(newCat) => setCategory(newCat)}
       />
       <Button
         title="Submit"

@@ -11,7 +11,7 @@ const SubCategoryPage = ({ navigation, route }) => {
     const [Subcategory, setSubcategory] = useState("")
 
     useEffect (()=>{
-        dispatch (getSubCategories())
+        dispatch (getSubCategories( route.params.categoryId ))
     }, [])
 
     const addSubcategory = (newSubcategory) => {
