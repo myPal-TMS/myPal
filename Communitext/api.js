@@ -41,3 +41,13 @@ export const allSentences = (subcatID,callback) => {
         },(error) => {console.log(error)} )
     })
 }
+
+export const insertSentence = (subcatID,sentence,callback) => {
+    db.transaction((tx) => {
+    console.log(sentence, subcatID)
+        tx.executeSql('INSERT INTO Sentences(sentence, subcatID) VALUES(?),(?)',[sentence,subcatID ], (tx, results) => {
+            callback(results.insertId)
+        },(error) => {console.log(error)} )
+    })
+}
+

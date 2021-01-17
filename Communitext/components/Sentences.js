@@ -1,15 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ScrollView, Button, Text, TouchableOpacity, View, TextInput } from 'react-native';
 import { useDispatch, useSelector } from "react-redux"; 
 import { _addSentence } from "../store/myPal_redux/actions";
+import { getSentences, addSentence } from '../store/myPal_redux/thunks';
 
 const Sentences = ({navigation, route}) => {
-        const dispatch = useDispatch ()
+    const dispatch = useDispatch ()
     const sentences = useSelector (({sentences}) => sentences)
     const [IndSentence, setIndSentence] = useState("")
+    
+    useEffect (()=>{
+        dispatch (getSentences( route.params.subcatID ))
+    }, [])
+
+    
     const testSentence = (newSentence) => {
         if (newSentence != "") {
-            dispatch (_addSentence(newSentence))
+            dispatch (addSentence( route.params.subcatID, newSentence))
             setIndSentence("")
         }
 
@@ -17,15 +24,13 @@ const Sentences = ({navigation, route}) => {
     return (
         <ScrollView>
             {sentences.map((sentence) => (
-                <TouchableOpacity key={sentence.id} onPress={() => alert(route.params.subcategory)}>
+                <TouchableOpacity key={sentence.SentenceID} onPress={() => alert(route.params.subcatID)}>
                     <Text>
                         {sentence.sentence}
                     </Text>
                 </TouchableOpacity>
             ))}
-            {/* <Text>
-                Test
-            </Text> */}
+           
             <TextInput value={IndSentence} placeholder="Enter new sentence" onChangeText={text => setIndSentence(text)} />
             <Button title="Submit" onPress={() => { testSentence(IndSentence) }} />
 

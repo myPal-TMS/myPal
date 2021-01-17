@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {allCategories, allSentences, allSubcategories} from '../../api';
+import {allCategories, allSentences, allSubcategories, insertSentence} from '../../api';
 import { _getCategories, _getSentences, _getSubcategories } from './actions';
 
 
@@ -42,3 +42,17 @@ export const getSentences = (subcatID) => {
         }
     }
 }
+export const addSentence = (subcatID, sentence) => {
+    return async (dispatch) => {
+        try{
+            insertSentence(subcatID, sentence, (sentenceID) => {
+                console.log(sentenceID)
+                // dispatch(_getSentences(sentences))
+            })
+        }
+        catch (err){
+            console.log(err)
+        }
+    }
+}
+

@@ -12,7 +12,7 @@ let sentID = 0;
 // const initialCatState = [{ id: 0, title: "cat1" }]
 
 // const initialSubCatState = [{ id: 0, title: "subcat1"}]
-const initialSentenceState = [{ id: 0, sentence: "hello world"}]
+//const initialSentenceState = [{ id: 0, sentence: "hello world"}]
 export const catReducer = (state = [], action) => {
     switch (action.type) {
         case ADD_CATEGORY:
@@ -49,7 +49,7 @@ export const subCatReducer = (state = [], action) => {
     }
 }
 
-export const sentenceReducer = (state = initialSentenceState, action) => {
+export const sentenceReducer = (state = [], action) => {
     switch (action.type){
         case ADD_SENTENCE:
             return [

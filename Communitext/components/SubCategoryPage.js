@@ -15,7 +15,7 @@ const SubCategoryPage = ({ navigation, route }) => {
         dispatch (getSubCategories( route.params.categoryID ))
     }, [])
 
-    console.log(subcategories);
+    //console.log(subcategories);
 
     const addSubcategory = (newSubcategory) => {
         if (newSubcategory != "") {
