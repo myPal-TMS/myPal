@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     
     //flex: 1,
     //flexDirection: 'column',
-    //justifyContent: 'space-evenly',
+    justifyContent: 'space-evenly',
     //flexWrap: 'wrap',
     //paddingHorizontal: 20,
     //marginLeft: 40,
@@ -84,8 +84,8 @@ const styles = StyleSheet.create({
     width: 150,
     height: 200,
     borderRadius: 20,
-    marginRight: windowWidth / 20,
-    marginLeft: windowWidth / 20,
+    marginRight: '5%',
+    marginLeft: '5%',
     marginTop: 20,
     marginBottom: 20,
     
@@ -116,9 +116,9 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     //alignItems: 'center',
     textAlign: 'center',
-    // textShadowColor: '#000000',
-    // textShadowOffset: {width: 0, height: 0},
-    // textShadowRadius: 1.5,
+     //textShadowColor: '#FFFFFF',
+    //textShadowOffset: {width: 0, height: 0},
+     //textShadowRadius: 1.5,
     color: '#000000'
   },
 });
