@@ -1,16 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ScrollView, Button, Text, TouchableOpacity, View, TextInput } from 'react-native';
 import { useDispatch, useSelector } from "react-redux"; 
 import { _addSentence } from "../store/myPal_redux/actions";
+import { getSentences, addSentence } from '../store/myPal_redux/thunks';
 import styles from './styles/sentencePageStyles';
 
 const Sentences = ({navigation, route}) => {
-        const dispatch = useDispatch ()
+    const dispatch = useDispatch ()
     const sentences = useSelector (({sentences}) => sentences)
     const [IndSentence, setIndSentence] = useState("")
+    
+    useEffect (()=>{
+        dispatch (getSentences( route.params.subcatID ))
+    }, [])
+
+    console.log(sentences)
     const testSentence = (newSentence) => {
         if (newSentence != "") {
-            dispatch (_addSentence(newSentence))
+            dispatch (addSentence( route.params.subcatID, newSentence))
             setIndSentence("")
         }
 
@@ -21,17 +28,16 @@ const Sentences = ({navigation, route}) => {
             <View
             styles = {styles.gallery}>
             {sentences.map((sentence) => (
-                <TouchableOpacity 
+                  <TouchableOpacity
                 style = {styles.sentenceButton}
-                key={sentence.id} onPress={() => alert(route.params.subcategory)}>
+                key={sentence.SentenceID} onPress={() => alert(route.params.subcatID)}>
                     <Text
                     style = {styles.text}>
                         {sentence.sentence}
                     </Text>
                 </TouchableOpacity>
             ))}
-
-            <TextInput 
+          <TextInput
             style = {styles.newSentenceText}
             value={IndSentence} placeholder="Enter new sentence" onChangeText={text => setIndSentence(text)} />
             <TouchableOpacity 

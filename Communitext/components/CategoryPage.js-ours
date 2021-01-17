@@ -15,6 +15,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { _addCategory } from "../store/myPal_redux/actions";
 import { getCategories } from "../store/myPal_redux/thunks";
+import { render } from "react-dom";
 
 const CategoryPage = ({ navigation }) => {
   
@@ -24,7 +25,6 @@ const CategoryPage = ({ navigation }) => {
   
   useEffect(() => {
     dispatch(getCategories())
-      // console.log(categories)
   }, [])
   
   const addCategory = (newCategory) => {
@@ -32,23 +32,25 @@ const CategoryPage = ({ navigation }) => {
       dispatch(_addCategory(newCategory));
     }
   };
-  console.log(categories)
-  const renderItem = (category) => (
+
+  const renderItem = ({item}) => (
 
     <TouchableOpacity 
     style = {styles.button}
     onPress={() =>
-
-        navigation.navigate("Subcategory", { categoryID: category.CategoryID })
+            
+      navigation.navigate("Subcategory", { category: item.name })
     }>
       
       <Image style = {styles.picture} source={require("../assets/Images/Categories/Actions/Actions.png")} />
         <Text
         style = {styles.text}>
-            {category.catName}
+            {item.name}
         </Text>
         
     </TouchableOpacity>
+    
+
 );
 
   return (
@@ -62,23 +64,13 @@ const CategoryPage = ({ navigation }) => {
         key = {'#'} 
         data = {categories} 
         renderItem = {renderItem} 
-        keyExtractor = { (item, index) => '#' + item.CategoryID.toString()}
-        numcolumns = {2}/>
+        keyExtractor = { (item, index) => '#' + item.id.toString()} 
+        numColumns = {2}/>
+        
       </View>
-
-      {/*<TextInput
-        value={Category}
-        placeholder="Enter new category"
-        onChangeText={(newCat) => setCategory(newCat)}
-    />
-      <Button
-          title="Submit"
-          onPress={() => {
-            addCategory(Category);
-            setCategory("");
-          }}/>*/}
     </View>
-  )
+			
+  );
 };
 
 export default CategoryPage;

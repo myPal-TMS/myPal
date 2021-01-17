@@ -8,18 +8,20 @@ import styles from './styles/subCategoryPageStyles';
 
 const SubCategoryPage = ({ navigation, route }) => {
     const dispatch = useDispatch ()
-    //const [Food, addFood] = useState(["apple", "banana"])
     const subcategories = useSelector (({subcategories}) => subcategories)
-    const [IndFood, setIndFood] = useState("")
+    const [Subcategory, setSubcategory] = useState("")
 
     useEffect (()=>{
-        dispatch (getSubCategories()) 
+        
+        dispatch (getSubCategories( route.params.categoryID ))
     }, [])
 
-    const testFood = (newFood) => {
-        if (newFood != "") {
-            dispatch (_addSubcategory(newFood))
-            setIndFood("")
+    //console.log(subcategories);
+
+    const addSubcategory = (newSubcategory) => {
+        if (newSubcategory != "") {
+            dispatch (_addSubcategory(newSubcategory))
+            setSubcategory("")
         }
 
     }
@@ -32,8 +34,8 @@ const SubCategoryPage = ({ navigation, route }) => {
             {subcategories.map((subcategory) => (
 
                 <TouchableOpacity 
-                key={subcategory.id} 
-                onPress={() => navigation.navigate("Sentences", { subcategory: subcategory.title })}
+                key={subcategory.SubCategoryID}
+                onPress={() =>   navigation.navigate("Sentences", { subcatID: subcategory.SubCategoryID })}
                 style = {styles.button}>
 
                     <Image source = {require("../assets/Images/Categories/Actions/1.png")}
@@ -41,21 +43,30 @@ const SubCategoryPage = ({ navigation, route }) => {
 
                         <Text
                         style = {styles.text}>
-                            {subcategory.title}
+                            {subcategory.subName}
                         </Text>
 
                     </TouchableOpacity>
                 ))}
                 </View>
-            {/* <Text>
-                Test
-            </Text> */}
+            ))}
 
+        {/*   <TextInput value={Subcategory}
+                       placeholder="Enter new subcategory"
+                       onChangeText={(text) => setSubcategory(text)} />
+*/}
+          {/*  <Button
+                title="Submit"
+                onPress={() => {
+                    addSubcategory(Subcategory)
+                    setSubcategory("")
+                }} />*/}
 
 
 
 
         </ScrollView>
     )
+    // console.log(subcategories)
 }
 export default SubCategoryPage
