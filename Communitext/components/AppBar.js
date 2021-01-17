@@ -29,7 +29,7 @@ const APPBAR_HEIGHT = Platform.select({
 
 const AppBarReactNative = props => {
   return (
-    <View style={{...globalStyles.shawdow,...styles.appBar}}>
+    <View style = {{...globalStyles.shawdow,...styles.appBar}}>
       <View style={styles.leftNav}>
         <TouchableOpacity
           onPress={props.onPress}
@@ -64,9 +64,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    backgroundColor:Colors.alterColor
+    backgroundColor:Colors.alterColor,
+    opacity: 0.5
 
-    // backgroundColor:colors.primary
+    //backgroundColor:colors.primary
   },
   leftNav: {
     //   marginLeft:8,
@@ -94,11 +95,15 @@ const styles = StyleSheet.create({
     //   borderBottomColor:colors.white,
     //   borderBottomWidth:1
     //   backgroundColor:colors.primary
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: 18
   },
   centerNavText: {
     fontSize: 18,
+    alignItems: 'center',
     // textDecorationLine: 'underline',
-    //   textAlign:"center"
+    textAlign:"center",
   },
 });
 

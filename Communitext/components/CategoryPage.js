@@ -1,51 +1,76 @@
-import React,{useState} from 'react';
+import React, { useState, useEffect } from "react";
+import {Table, TableWrapper, Row, Column, Rows} from "react-native-table-component";
+import styles from './styles/categoryPageStyles';
 import {
-    View,
-    Text,
-    TouchableOpacity,
-    Image,
-    ScrollView,
-    TextInput,
-    Button
-} from 'react-native';
+  View,
+  Text,
+  TouchableOpacity,
+  Image,
+  ScrollView,
+  FlatList,
+  TextInput,
+  Button,
+} from "react-native";
 
+import { useDispatch, useSelector } from "react-redux";
+import { _addCategory } from "../store/myPal_redux/actions";
+import { getCategories } from "../store/myPal_redux/thunks";
+import { render } from "react-dom";
 
-const CategoryPage = ({navigation}) => {
-    const [categories, setCategories] = useState(["category1", "category2", "category3", "category4", "category5", "category6"]);
-    const [Category, setCategory] = useState("");
-
-    const addCategory = (newCategory) => {
-        if(newCategory != "")
-        {
-            setCategories(oldState => [...oldState, newCategory]);
-        }
+const CategoryPage = ({ navigation }) => {
+  
+  const dispatch = useDispatch();
+  const categories = useSelector(({categories}) => categories);
+  const [Category, setCategory] = useState("");
+  
+  useEffect(() => {
+    dispatch(getCategories())
+  }, [])
+  
+  const addCategory = (newCategory) => {
+    if (newCategory != "") {
+      dispatch(_addCategory(newCategory));
     }
+  };
 
-    return(
-        <ScrollView>
-            {categories.map((category,index) => (
-         <TouchableOpacity
-                        key = {index}
-                        onPress={() =>
-                            navigation.navigate('Subcategory', {category: category})}>
-                        <Image source = {require('../assets/images/smiley.jpg')}/>
-                        <Text>
-                            {category}
-                        </Text>
-         </TouchableOpacity>
+  const renderItem = ({item}) => (
 
+    <TouchableOpacity 
+    style = {styles.button}
+    onPress={() =>
+            
+      navigation.navigate("Subcategory", { category: item.name })
+    }>
+      
+      <Image style = {styles.picture} source={require("../assets/Images/Categories/Actions/Actions.png")} />
+        <Text
+        style = {styles.text}>
+            {item.name}
+        </Text>
+        
+    </TouchableOpacity>
+    
 
-                   ))}
-            <TextInput
-                value = {Category}
-                placeholder = "Enter new category"
-                onChangeText = {text =>
-                    setCategory(text)} />
-            <Button title = "Submit"
-                    onPress = {() => {addCategory(Category);
-                    setCategory("")}}/>
-        </ScrollView>
-    )
-        }
+);
+
+  return (
+    <View
+    style = {styles.container}>
+
+      <View
+      style = {styles.gallery}>
+        <FlatList 
+        
+        key = {'#'} 
+        data = {categories} 
+        renderItem = {renderItem} 
+        keyExtractor = { (item, index) => '#' + item.id.toString()} 
+        numColumns = {2}/>
+        
+      </View>
+    </View>
+			
+  );
+};
 
 export default CategoryPage;
