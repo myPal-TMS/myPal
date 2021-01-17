@@ -52,13 +52,7 @@ export const subCatReducer = (state = [], action) => {
 export const sentenceReducer = (state = [], action) => {
     switch (action.type){
         case ADD_SENTENCE:
-            return [
-                ...state,
-                {
-                    id: ++sentID,
-                    sentence: action.sentence
-                }
-            ]
+            return [...state, action.sentence]
         case GET_SENTENCES:
             state = action.sentences
             return state

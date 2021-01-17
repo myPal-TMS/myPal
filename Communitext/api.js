@@ -1,6 +1,7 @@
 import * as FileSystem from 'expo-file-system'
 import * as SQLite from 'expo-sqlite'
 import {Asset} from 'expo-asset';
+import { sub } from 'react-native-reanimated';
 
 
 
@@ -45,8 +46,11 @@ export const allSentences = (subcatID,callback) => {
 export const insertSentence = (subcatID,sentence,callback) => {
     db.transaction((tx) => {
     console.log(sentence, subcatID)
-        tx.executeSql('INSERT INTO Sentences(sentence, subcatID) VALUES(?),(?)',[sentence,subcatID ], (tx, results) => {
-            callback(results.insertId)
+        tx.executeSql('INSERT INTO Sentences(sentence, subcatID) VALUES(?,?)',[sentence, subcatID], (tx, results) => {
+            tx.executeSql('SELECT * FROM SENTENCES WHERE SentenceID = ?', [results.insertId], (tx, results) =>{
+                
+                callback(...results.rows._array)
+            })
         },(error) => {console.log(error)} )
     })
 }
