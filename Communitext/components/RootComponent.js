@@ -8,7 +8,7 @@ const RootComponent = props => {
   return (
     <SafeAreaView style={{ flex: 1,backgroundColor:Colors.primary }} forceInset={{ top: 'always' }}>
       <StatusBar
-        barStyle="light-content"
+        barStyle = "light-content"
         backgroundColor={Colors.primary}
       />
       {props.children}

@@ -121,6 +121,7 @@ const styles = StyleSheet.create({
     
     marginLeft: 140,
     marginRight: 140,
+    marginBottom: 50,
     borderRadius: 20,
     marginHorizontal: 70
 

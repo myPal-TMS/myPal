@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
     //   backgroundColor:colors.primary
     alignItems: 'center',
     justifyContent: 'center',
+    fontSize: 18
   },
   centerNavText: {
     fontSize: 18,
