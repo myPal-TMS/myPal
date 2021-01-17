@@ -32,20 +32,20 @@ const CategoryPage = ({ navigation }) => {
       dispatch(_addCategory(newCategory));
     }
   };
-  console.log(categories)
-  const renderItem = (category) => (
+ // console.log(categories)
+  const renderItem = ({item}) => (
 
     <TouchableOpacity 
     style = {styles.button}
     onPress={() =>
-
-        navigation.navigate("Subcategory", { categoryID: category.CategoryID })
+         {  console.log(item.catName)
+            navigation.navigate("Subcategory", { categoryID: item.CategoryID })}
     }>
       
       <Image style = {styles.picture} source={require("../assets/Images/Categories/Actions/Actions.png")} />
         <Text
         style = {styles.text}>
-            {category.catName}
+            {item.catName}
         </Text>
         
     </TouchableOpacity>
@@ -63,7 +63,7 @@ const CategoryPage = ({ navigation }) => {
         data = {categories} 
         renderItem = {renderItem} 
         keyExtractor = { (item, index) => '#' + item.CategoryID.toString()}
-        numcolumns = {2}/>
+        numColumns = {2}/>
       </View>
 
       {/*<TextInput

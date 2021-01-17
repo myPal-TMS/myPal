@@ -48,8 +48,8 @@ const SubCategoryPage = ({ navigation, route }) => {
 
                     </TouchableOpacity>
                 ))}
-                </View>
-            ))}
+            </View>
+
 
         {/*   <TextInput value={Subcategory}
                        placeholder="Enter new subcategory"
