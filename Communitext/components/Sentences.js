@@ -14,7 +14,6 @@ const Sentences = ({navigation, route}) => {
         dispatch (getSentences( route.params.subcatID ))
     }, [])
 
-    console.log(sentences)
     const testSentence = (newSentence) => {
         if (newSentence != "") {
             dispatch (addSentence( route.params.subcatID, newSentence))
