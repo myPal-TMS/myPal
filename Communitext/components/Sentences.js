@@ -24,7 +24,7 @@ const Sentences = ({navigation, route}) => {
     const GetVoices = async()=>{
         let availableVoices = await Speech.getAvailableVoicesAsync();
         if (availableVoices){
-            let englishVoices = availableVoices.filter(voice => voice.language === "en-US")
+            let englishVoices = availableVoices.filter(voice => voice.language === "en-US" && voice.name.includes("local"))
             console.log(englishVoices)
             // availableVoices.map((voice) =>{
             //     if(voice.language === "en-US")
