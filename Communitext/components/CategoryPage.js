@@ -15,6 +15,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { _addCategory } from "../store/myPal_redux/actions";
 import { getCategories } from "../store/myPal_redux/thunks";
+import {Images} from "../assets/Images/ImagesRoot"
 
 const CategoryPage = ({ navigation }) => {
   
@@ -38,11 +39,12 @@ const CategoryPage = ({ navigation }) => {
     <TouchableOpacity 
     style = {styles.button}
     onPress={() =>
-         {  console.log(item.catName)
-            navigation.navigate("Subcategory", { categoryID: item.CategoryID })}
+         navigation.navigate("Subcategory", 
+         { categoryID: item.CategoryID, category: item.catName }
+         )
     }>
       
-      <Image style = {styles.picture} source={require("../assets/Images/Categories/Actions/Actions.png")} />
+      <Image style = {styles.picture} source={Images.Categories[item.CategoryID]} />
         <Text
         style = {styles.text}>
             {item.catName}

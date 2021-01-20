@@ -5,6 +5,7 @@ import { ADD_SUBCATEGORY } from '../store/constants';
 import { _addSubcategory} from "../store/myPal_redux/actions";
 import { getSubCategories } from '../store/myPal_redux/thunks';
 import styles from './styles/subCategoryPageStyles';
+import {Images} from '../assets/Images/ImagesRoot';
 
 const SubCategoryPage = ({ navigation, route }) => {
     const dispatch = useDispatch ()
@@ -12,8 +13,7 @@ const SubCategoryPage = ({ navigation, route }) => {
     const [Subcategory, setSubcategory] = useState("")
 
     useEffect (()=>{
-        
-        dispatch (getSubCategories( route.params.categoryID ))
+        dispatch(getSubCategories( route.params.categoryID ))
     }, [])
 
     //console.log(subcategories);
@@ -35,10 +35,10 @@ const SubCategoryPage = ({ navigation, route }) => {
 
                 <TouchableOpacity 
                 key={subcategory.SubCategoryID}
-                onPress={() =>   navigation.navigate("Sentences", { subcatID: subcategory.SubCategoryID })}
+                onPress={() =>   navigation.navigate("Sentences", { subcatID: subcategory.SubCategoryID, subcategory: subcategory.subName })}
                 style = {styles.button}>
 
-                    <Image source = {require("../assets/Images/Categories/Actions/1.png")}
+                    <Image source = {Images.Subcategories[subcategory.SubCategoryID]}
 		            style = {styles.picture} />
 
                         <Text
