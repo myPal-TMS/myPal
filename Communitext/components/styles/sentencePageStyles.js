@@ -97,7 +97,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     //letterSpacing: 1,
     alignItems: 'center',
-    color: '#FFFFFF',
+    color: '#000000',
+    fontStyle: 'italic',
     backgroundColor: '#F4E4D5',
     
     alignItems: 'center',
@@ -136,7 +137,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     textAlign: 'center',
     alignItems: 'center',
-    color: 'white'
+    //color: '#000000'
     
     
   },
