@@ -9,16 +9,16 @@ Communitext/*.mobileprovision
 Communitext/*.orig.*
 Communitext/web-build/
 .expo/*
-myPal_client/node_modules/**/*
-myPal_client/.expo/*
-myPal_client/npm-debug.*
-myPal_client/*.jks
-myPal_client/*.p8
-myPal_client/*.p12
-myPal_client/*.key
-myPal_client/*.mobileprovision
-myPal_client/*.orig.*
-myPal_client/web-build/
+myPal/node_modules/**/*
+myPal/.expo/*
+myPal/npm-debug.*
+myPal/*.jks
+myPal/*.p8
+myPal/*.p12
+myPal/*.key
+myPal/*.mobileprovision
+myPal/*.orig.*
+myPal/web-build/
 # macOS
 .DS_Store
 Communitext/.DS_Store
