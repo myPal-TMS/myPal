@@ -59,10 +59,13 @@ const App = () => {
   }
 
   const settingsButton = (navigation) => (
-    <Button title= "settings" onPress ={() => {
-      navigation.set
-      navigation.navigate("Settings", {availablevoices: voices, voice: voice})
-    }} />
+    <Button 
+      title= "settings" 
+      onPress ={() => {
+        navigation.set
+        navigation.navigate("Settings", {availablevoices: voices, voice: voice})
+      }} 
+    />
   )
 
   useEffect(() => {
@@ -76,7 +79,7 @@ const App = () => {
           <Stack.Screen name = "myPAL" component = {CategoryPage}/>
           <Stack.Screen name = "Subcategory" component = {SubCategoryPage} options={({ route }) => ({ title: route.params.category })}/>
           <Stack.Screen name = "Sentences" component = {Sentences} options = {({ route }) => ({ title: route.params.subcategory })}/>
-          <Stack.Screen name = "Settings" component = {Settings} />
+          <Stack.Screen name = "Settings" component = {Settings} options={{headerRight: () => null}}/>
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

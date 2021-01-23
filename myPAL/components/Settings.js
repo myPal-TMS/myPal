@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Tts from 'react-native-tts'
 
-import { View} from 'react-native';
+import { FlatList, TouchableOpacity, View} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import{RadioButton, Text } from 'react-native-paper'
+import styles from './styles/sentencePageStyles';
 
 
 const Settings = ({navigation, route}) => {
     const [voice, setVoice] = useState("")
-    //console.log(route.params)
     useEffect(() => {
         setVoice(route.params.voice)
     }, [])
@@ -26,15 +26,28 @@ const Settings = ({navigation, route}) => {
         }
     }
 
+    const renderItem = ({item, index}) => (
+        <TouchableOpacity style={styles.sentenceButton} onPress = {() => changeVoice(item.id) }>
+                    <Text style={styles.text}>Voice {index}</Text>
+                    <RadioButton 
+                        value = {item.id}
+                        status = {voice === item.id ? 'checked' : 'unchecked' }
+                        onPress={() => changeVoice(item.id)}
+                    />
+        </TouchableOpacity>
+    )
+
     return(
-        <RadioButton.Group onValueChange={newVoice => changeVoice(newVoice)} value = {voice}>
-            {route.params.availablevoices.map((voice, index) => (
-                <View key={index}>
-                    <Text>Voice {index}</Text>
-                    <RadioButton value = {voice.id}/>
-                </View>
-            ))}
-        </RadioButton.Group>
+        <View style ={styles.container}>
+            
+        <FlatList
+            keyExtractor= {(item) => item.id}
+            data = {route.params.availablevoices}
+            renderItem = {renderItem}
+            extraData = {voice}
+        />
+        
+        </View>
 
     )
 }

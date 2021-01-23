@@ -17,6 +17,7 @@ const Sentences = ({navigation, route}) => {
     }, [])
 
     const speak = (sentence) => {
+        Tts.stop();
         Tts.speak(sentence);
       };
 
