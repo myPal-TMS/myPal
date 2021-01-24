@@ -10,7 +10,16 @@ import styles from './styles/sentencePageStyles';
 const Settings = ({navigation, route}) => {
     const [voice, setVoice] = useState("")
     useEffect(() => {
-        setVoice(route.params.voice)
+       AsyncStorage.getItem('defaultVoice')
+       .then((value) => {
+           if(value !== null){
+               setVoice(value)
+           }
+           else{
+               setVoice(route.params.voice)
+           }
+       })
+        
     }, [])
 
     const changeVoice = async(newVoice) => {
@@ -28,7 +37,7 @@ const Settings = ({navigation, route}) => {
 
     const renderItem = ({item, index}) => (
         <TouchableOpacity style={styles.sentenceButton} onPress = {() => changeVoice(item.id) }>
-                    <Text style={styles.text}>Voice {index}</Text>
+                    <Text style={styles.text}>Voice {index + 1}</Text>
                     <RadioButton 
                         value = {item.id}
                         status = {voice === item.id ? 'checked' : 'unchecked' }
@@ -46,7 +55,7 @@ const Settings = ({navigation, route}) => {
             renderItem = {renderItem}
             extraData = {voice}
         />
-        
+
         </View>
 
     )
