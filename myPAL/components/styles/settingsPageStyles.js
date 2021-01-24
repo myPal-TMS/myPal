@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     aspectRatio: 1/1,
     width: 100,
     height: 100,
-    margin:10,
+    margin:15,
     
     
     

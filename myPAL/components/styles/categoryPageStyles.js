@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     aspectRatio: 1/1,
     width: 100,
     height: 100,
-    margin:10,
+    margin:15,
   },
 
   text: {
@@ -109,10 +109,10 @@ const styles = StyleSheet.create({
     //fontStyle: normal,
     fontWeight: 'bold',
     fontSize: 25,
-    lineHeight: 25,
+    //lineHeight: 25,
     //display: flex,
     //alignSelf: 'center',
-    flex: 0.5,
+    //flex: 0.5,
     flexDirection: 'column',
     //alignItems: 'center',
     textAlign: 'center',
