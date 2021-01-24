@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     //paddingBottom: 30,
     //paddingHorizontal: 30,
     backgroundColor: '#CBC2B9',
-    width: windowWidth,
+    //width: windowWidth,
     //height: windowHeight,
     //flexDirection: 'row'
     //fontFamily: 'Dosis-Bold'
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     //marginLeft: 40,
     
     //flexWrap: 'wrap',
-    width: windowWidth,
+    //width: windowWidth,
     //padding: 10,
     //height: windowHeight,
     //marginBottom: 30,
@@ -91,8 +91,6 @@ const styles = StyleSheet.create({
     
     
   },
-
-
 
   picture: {
     flex: 1,
