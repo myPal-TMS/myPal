@@ -4,7 +4,7 @@ import Tts from 'react-native-tts'
 import { FlatList, TouchableOpacity, View} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import{RadioButton, Text } from 'react-native-paper'
-import styles from './styles/sentencePageStyles';
+import styles from './styles/settingsPageStyles';
 
 
 const Settings = ({navigation, route}) => {
@@ -38,7 +38,7 @@ const Settings = ({navigation, route}) => {
     }
 
     const renderItem = ({item, index}) => (
-        <TouchableOpacity style={styles.sentenceButton} onPress = {() => changeVoice(item.id) }>
+        <TouchableOpacity style={styles.button} onPress = {() => changeVoice(item.id) }>
                     <Text style={styles.text}>Voice {index + 1}</Text>
                     <RadioButton 
                         value = {item.id}
@@ -52,6 +52,7 @@ const Settings = ({navigation, route}) => {
         <View style ={styles.container}>
             
         <FlatList
+            style = {styles.gallery}
             keyExtractor= {(item) => item.id}
             data = {route.params.availablevoices}
             renderItem = {renderItem}
