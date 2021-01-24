@@ -113,12 +113,9 @@ const styles = StyleSheet.create({
     //alignItems: 'center',
     textAlign: 'center',
     //flex: 0.5,
-    flexDirection: 'column',
     // textShadowColor: '#000000',
     // textShadowOffset: {width: 0, height: 0},
     // textShadowRadius: 1.5,
-  
-    
     color: '#000000'
   },
 });
