@@ -19,7 +19,7 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9E60603DC621D8211B53D0BA /* libPods-myPAL-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7813D4F6DBF38B7CC9FD5D72 /* libPods-myPAL-tvOSTests.a */; };
 		B778A03DA8B232C158C40772 /* libPods-myPAL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C15A7D112734C86459DB0B /* libPods-myPAL.a */; };
-		E09A976B25BD1AC100931DDB /* www in Resources */ = {isa = PBXBuildFile; fileRef = E09A976A25BD1AC100931DDB /* www */; };
+		E09A978F25BDBF8B00931DDB /* www in Resources */ = {isa = PBXBuildFile; fileRef = E09A978E25BDBF8B00931DDB /* www */; };
 		E39D4219D1C94D066CA05AAB /* libPods-myPAL-myPALTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F19F05413C3BD99C0EB1C6E2 /* libPods-myPAL-myPALTests.a */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +64,7 @@
 		CDE4957CE0D750B66692B1EF /* Pods-myPAL-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myPAL-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-myPAL-tvOSTests/Pods-myPAL-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		D3C15A7D112734C86459DB0B /* libPods-myPAL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myPAL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FCBB8BE85C1C758F7B4582 /* Pods-myPAL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myPAL.release.xcconfig"; path = "Target Support Files/Pods-myPAL/Pods-myPAL.release.xcconfig"; sourceTree = "<group>"; };
-		E09A976A25BD1AC100931DDB /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../../www; sourceTree = "<group>"; };
+		E09A978E25BDBF8B00931DDB /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = myPAL/www; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F19F05413C3BD99C0EB1C6E2 /* libPods-myPAL-myPALTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myPAL-myPALTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,7 +127,7 @@
 		13B07FAE1A68108700A75B9A /* myPAL */ = {
 			isa = PBXGroup;
 			children = (
-				E09A976A25BD1AC100931DDB /* www */,
+				E09A978E25BDBF8B00931DDB /* www */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -150,6 +150,13 @@
 				7813D4F6DBF38B7CC9FD5D72 /* libPods-myPAL-tvOSTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BA80B9450A44C9497C28057 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		67123E72B9F5D6B6B45C5578 /* Pods */ = {
@@ -200,14 +207,6 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
-		};
-		3BA80B9450A44C9497C28057 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -352,7 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E09A976B25BD1AC100931DDB /* www in Resources */,
+				E09A978F25BDBF8B00931DDB /* www in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
