@@ -73,9 +73,9 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    //flex: 1,
-    //flexDirection: 'column',
-    //justifyContent: 'space-between',
+    //flex: 2,
+    flexDirection: 'column',
+    justifyContent: 'space-evenly',
     padding: 5,
     alignItems: 'center',
     //marginTop: 30,
@@ -84,8 +84,8 @@ const styles = StyleSheet.create({
     width: 150,
     height: 200,
     borderRadius: 20,
-    marginRight: '5%',
-    marginLeft: '5%',
+    //marginRight: '5%',
+    margin: '5%',
     marginTop: 20,
     marginBottom: 20,
     
