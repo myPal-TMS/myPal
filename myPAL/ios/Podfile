@@ -8,6 +8,10 @@ target 'myPAL' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'TextToSpeech', :path => '../node_modules/react-native-tts'
+
+
+
   target 'myPALTests' do
     inherit! :complete
     # Pods for testing
@@ -31,3 +35,5 @@ target 'myPAL-tvOS' do
     # Pods for testing
   end
 end
+
+pod 'react-native-sqlite-storage', :path => '../node_modules/react-native-sqlite-storage'

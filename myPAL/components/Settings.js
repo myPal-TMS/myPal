@@ -22,6 +22,8 @@ const Settings = ({navigation, route}) => {
         
     }, [])
 
+    console.log(route.params.availablevoices)
+
     const changeVoice = async(newVoice) => {
         try{
             await AsyncStorage.setItem('defaultVoice', newVoice)
