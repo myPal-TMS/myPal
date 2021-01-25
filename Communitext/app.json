@@ -2,7 +2,7 @@
   "expo": {
     "name": "Communitext",
     "slug": "Communitext",
-    "version": "4.0.17",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -10,7 +10,6 @@
       "resizeMode": "contain",
       "backgroundColor": "#F4E4D5",
       "borderRadius": "20"
-      
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -19,13 +18,18 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.abidh0601.Communitext"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#F4E4D5"
-      }
+      },
+      "permissions": [
+        "WRITE_SETTINGS"
+      ],
+      "package": "com.abidh0601.Communitext"
     },
     "web": {
       "favicon": "./assets/icon.png"

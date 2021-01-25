@@ -49,3 +49,11 @@ Please incorporate it into your project, and we hope to see new, exciting, and i
 - Submission deadline: Monday, January 25th, 2021 at 7:00am
 
 If your team has any questions, problems, or concerns, please contact us at hunter.codefest@gmail.com.
+
+## MyPAL (Picture Assisted Language) App
+
+An Augmentative and Alternative Communication (AAC) app created to help children with autism, special needs, or verbal delays communicate with the world around them. 
+
+This app was created with the Picture Exchange Communication System (PECS) theory in mind, the goal of which is to provide children with speech delays with a fast and functional method of communication by using pictures. 
+
+Below is information on performing some common tasks: 

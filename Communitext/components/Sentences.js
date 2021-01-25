@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { _addSentence } from "../store/myPal_redux/actions";
 import { getSentences, addSentence } from '../store/myPal_redux/thunks';
 import styles from './styles/sentencePageStyles';
+import * as Speech from 'expo-speech';
+
 
 const Sentences = ({navigation, route}) => {
     const dispatch = useDispatch ()
@@ -13,6 +15,28 @@ const Sentences = ({navigation, route}) => {
     useEffect (()=>{
         dispatch (getSentences( route.params.subcatID ))
     }, [])
+
+    const speak = (sentence) => {
+        Speech.speak(sentence);
+      };
+
+
+    const GetVoices = async()=>{
+        let availableVoices = await Speech.getAvailableVoicesAsync();
+        // if (availableVoices){
+        //     let englishVoices = availableVoices.filter(voice => voice.language === "en-US" && voice.name.includes("local"))
+        //     console.log(englishVoices)
+        //     // availableVoices.map((voice) =>{
+        //     //     if(voice.language === "en-US")
+        //     //     {
+        //     //         console.log(voice)
+        //     //     }
+                
+        //     // })
+        // }
+
+        console.log(availableVoices)
+    }
 
     const testSentence = (newSentence) => {
         if (newSentence != "") {
@@ -29,7 +53,7 @@ const Sentences = ({navigation, route}) => {
             {sentences.map((sentence) => (
                   <TouchableOpacity
                 style = {styles.sentenceButton}
-                key={sentence.SentenceID} onPress={() => alert(route.params.subcatID)}>
+                key={sentence.SentenceID} onPress={() => {speak(sentence.sentence); GetVoices()}}>
                     <Text
                     style = {styles.text}>
                         {sentence.sentence}

@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
     //height: windowHeight,
     //paddingBottom: 30,
     alignItems: 'center',
+    marginBottom: 20,
     
     
     
