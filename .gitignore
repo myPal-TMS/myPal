@@ -19,8 +19,9 @@ myPal/*.key
 myPal/*.mobileprovision
 myPal/*.orig.*
 myPal/web-build/
+
 # macOS
 .DS_Store
 Communitext/.DS_Store
 node_modules/**/*
-.idea
+.idea/*
