@@ -1,12 +1,6 @@
 # Hunter Codefest 2020-2021
 
-# How to install
-
-## React-Native Development Build
-- Clone this repository. 
-- Run `npm i` to install dependencies.
-
-## Android
+## <ins>Android Installation</ins>
 
 ### APK Download
 - The APK file can be found in `Builds/Andriod` named `myPAL.apk`.
@@ -16,15 +10,15 @@
 ![gif](https://media.giphy.com/media/z822KGWpU1KJ7ebTDg/giphy.gif)
 
 
-# How to run
-## React-Native Development Build
+## <ins>React-Native Development Build Installation</ins>
+- Clone this repository. 
 - Navigate to the `myPAL` directory.
+- Run `npm i` to install dependencies.
 
-### iOS
+### How to run iOS installation on MacOS
 - Run the following command: ```npx react-native run-ios```
 - Warning: Requires a device with macOS and xCode.
 
-### Android
+### How to run Android installation on Windows/Linux
 - Run the following command: ```npx react-native run-android ```.
-
 - Warning: Requires an android device with [USB Debugging enabled](https://developer.android.com/studio/debug/dev-options) or an [android emulator](https://developer.android.com/studio/run/emulator).
