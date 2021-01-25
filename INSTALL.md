@@ -13,7 +13,6 @@
 - Download the apk file to an android device and install.
 - Run the app that was installed.
 
-<br />
 
 # How to run
 ## React-Native Development Build
@@ -21,9 +20,9 @@
 
 ### iOS
 - Run the following command: ```npx react-native run-ios```
-- <span style="color: red">Warning:</span> Requires a device with macOS and xCode.
+- Warning: Requires a device with macOS and xCode.
 
 ### Android
 - Run the following command: ```npx react-native run-android ```.
 
-- <span style="color: red">Warning:</span> Requires an android device with [USB Debugging enabled](https://developer.android.com/studio/debug/dev-options) or an [android emulator](https://developer.android.com/studio/run/emulator).
+- Warning: Requires an android device with [USB Debugging enabled](https://developer.android.com/studio/debug/dev-options) or an [android emulator](https://developer.android.com/studio/run/emulator).
