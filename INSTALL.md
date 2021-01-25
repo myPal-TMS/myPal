@@ -13,6 +13,8 @@
 - Download the apk file to an android device and install.
 - Run the app that was installed.
 
+![gif](https://media.giphy.com/media/z822KGWpU1KJ7ebTDg/giphy.gif)
+
 
 # How to run
 ## React-Native Development Build
