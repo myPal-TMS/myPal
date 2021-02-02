@@ -58,7 +58,7 @@ An Augmentative and Alternative Communication (AAC) app created to help children
 This app was created with the Picture Exchange Communication System (PECS) theory in mind, the goal of which is to provide children with speech delays with a fast and functional method of communication by using pictures. 
 
 Below is information on performing some common tasks: 
-- Greentings
+- Greetings
 - Responses
 - Communicating need
 
