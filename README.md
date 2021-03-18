@@ -11,6 +11,8 @@ Below is information on performing some common tasks:
 
 Users can also add their own custom sentences. 
 
+<img src='Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 Credit to: Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
 
 ### \*Read install.md for installation instructions\*
